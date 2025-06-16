@@ -1,0 +1,398 @@
+/* In css/campus-styles.css */
+
+/* --- Hero Section --- */
+.campus-hero {
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+    background-color: #f5f7fa;
+    padding-left: 50px;
+}
+.campus-hero .hero-content {
+    flex: 1;
+}
+.campus-hero .hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    margin-left: 200px;
+}
+/* --- Interactive Tabbed Section --- */
+.campus-features {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tabs-nav .tab-link {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #D8D8D8;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+.tabs-nav .tab-link:hover {
+    border-color: #0056D2;
+    color: #0056D2;
+}
+
+.tabs-nav .tab-link.active {
+    background-color: #0056D2;
+    color: white;
+    border-color: #0056D2;
+}
+
+.tabs-content .tab-pane {
+    display: none; /* Hide all panes by default */
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tabs-content .tab-pane.active {
+    display: flex; /* Show only the active pane */
+}
+
+.tab-pane img {
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.logo-strip{
+    display: flex;
+    margin-left: 450px;
+    
+}
+
+.logo-strip img{
+    padding-right: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+/* --- 4. Content Grid Section --- */
+.content-grid-section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+.content-grid-section h2 {
+    font-size: 2.5rem;
+    color: var(--campus-text-dark);
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+}
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.content-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow 0.2s ease;
+}
+.content-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.content-card img {
+    max-width: 150px;
+}
+
+/* --- 5. Report Promo Section --- */
+.report-promo {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem 5%;
+    background-color: var(--campus-light-bg);
+}
+.promo-image { flex: 1; }
+.promo-text { flex: 1; }
+.promo-text h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.promo-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--campus-text-light);
+    margin-bottom: 1.5rem;
+}
+.text-link {
+    color: var(--campus-cta-blue);
+    font-weight: bold;
+    text-decoration: none;
+}
+.text-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive Media Query --- */
+@media (max-width: 768px) {
+    .campus-hero, .report-promo, .tab-pane.active {
+        flex-direction: column;
+        text-align: center;
+    }
+    .tab-pane.active {
+        gap: 1.5rem;
+    }
+    .tab-pane img { max-width: 100%; }
+    .content-grid { grid-template-columns: 1fr; }
+    .campus-hero .hero-content h1, h1 { font-size: 2.5rem; }
+    h2, .campus-features h2 { font-size: 2rem; }
+}
+
+
+
+/* In css/campus-styles.css, at the bottom */
+
+/* --- 6. Get in Touch Section --- */
+.contact-form-section {
+    padding: 4rem 5%;
+    background-color: var(--campus-light-bg);
+}
+
+.contact-form-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Left Column Styling */
+.contact-info h2 {
+    font-size: 2.5rem;
+    color: var(--campus-primary-blue);
+    margin-bottom: 1rem;
+}
+.contact-info p {
+    font-size: 1.1rem;
+    color: var(--campus-text-light);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.benefit-item img {
+    width: 32px;
+    height: 32px;
+    margin-top: 5px;
+}
+.benefit-text h3 {
+    font-size: 1.1rem;
+    color: var(--campus-text-dark);
+    margin: 0 0 0.25rem 0;
+}
+.benefit-text p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Right Column (Form) Styling */
+.contact-form-wrapper {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--campus-cta-blue);
+    box-shadow: 0 0 0 2px rgba(0, 86, 210, 0.2);
+}
+.form-fine-print {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 1rem;
+    text-align: center;
+}
+.form-feedback-message {
+    margin: 1rem 0;
+    color: #d93025; /* Red for errors */
+    font-weight: bold;
+    min-height: 1em; /* Prevents layout shifts */
+}
+.form-feedback-message.success {
+    color: #1e8e3e; /* Green for success */
+}
+.contact-form-wrapper .cta-button {
+    width: 100%;
+}
+
+
+/* --- Responsive Adjustments for Contact Form --- */
+@media (max-width: 900px) {
+    .contact-form-section .container {
+        grid-template-columns: 1fr; /* Stack the columns on smaller screens */
+    }
+}
+
+/* ============================
+   ✅ FULL MOBILE ENHANCEMENT
+   ============================ */
+   @media (max-width: 600px) {
+    .campus-hero {
+      flex-direction: column;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+  
+    .hero-image img {
+      margin-left: 0;
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .campus-hero .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .tabs-nav {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .tabs-content .tab-pane {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    .tab-pane img {
+      max-width: 100%;
+    }
+  
+    .logo-strip {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-left: 0;
+      gap: 1rem;
+    }
+  
+    .logo-strip img {
+      width: 100px;
+      height: auto;
+      padding-right: 0;
+    }
+  
+    .content-grid-section h2 {
+      font-size: 1.75rem;
+    }
+  
+    .content-grid {
+      grid-template-columns: 1fr;
+      padding: 0 1rem;
+    }
+  
+    .content-card {
+      padding: 1.5rem;
+    }
+  
+    .report-promo {
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+  
+    .promo-text h3 {
+      font-size: 1.5rem;
+    }
+  
+    .promo-text p {
+      font-size: 1rem;
+    }
+  
+    .contact-form-section {
+      padding: 2rem 1rem;
+    }
+  
+    .contact-form-section .container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+  
+    .form-group input,
+    .form-group select {
+      font-size: 1rem;
+    }
+  
+    .contact-info h2 {
+      font-size: 1.75rem;
+    }
+  
+    .benefit-item {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .benefit-item img {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .benefit-text h3 {
+      font-size: 1rem;
+    }
+  
+    .form-fine-print {
+      font-size: 0.75rem;
+    }
+  }
+  

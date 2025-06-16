@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursera | Degrees, Certificates, & Free Online Courses</title>
+    <link rel="stylesheet" href="css/style_responsive.css">
+    <link rel="stylesheet" href="css/campus-styles.css">
+    <link rel="stylesheet" href="css/businessstyles.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      /* ===== MOBILE RESPONSIVENESS ENHANCEMENTS ===== */
+      
+      /* Global mobile adjustments */
+      @media (max-width: 768px) {
+          /* Reset body font size */
+          body {
+              font-size: 14px !important;
+          }
+          
+          /* Header & Navigation */
+          header, .top-nav, .topsec-nav, .main-nav, .auth-nav {
+              flex-direction: column !important;
+              align-items: center !important;
+              text-align: center;
+              padding: 10px !important;
+              gap: 10px;
+          }
+          
+          .main-nav a, .auth-nav a, 
+          .career-div-navbuttons, .career-div-popular, 
+          .career-div-level, .explore-button, 
+          .explore-all, .certificate-showmore-btn {
+              font-size: 0.95rem !important;
+              margin: 5px !important;
+              width: 100% !important;
+          }
+          
+          .explore-button {
+              margin-right: 0 !important;
+          }
+          
+          .explore-dropdown {
+              position: static !important;
+              width: 100% !important;
+              grid-template-columns: 1fr !important;
+              padding: 1rem !important;
+          }
+          
+          /* Hero Section */
+          .hero {
+              flex-direction: column !important;
+              padding: 2rem 1rem !important;
+          }
+          
+          .hero-content h1 {
+              font-size: 1.75rem !important;
+          }
+          
+          .hero-content p {
+              font-size: 1rem !important;
+          }
+          
+          .search-container input {
+              font-size: 0.9rem !important;
+              padding: 0.75rem !important;
+          }
+          
+          /* Career Roles */
+          .career-roles {
+              flex-direction: column !important;
+              align-items: center !important;
+              gap: 1rem !important;
+              padding: 0 1rem !important;
+          }
+          
+          .role-cards {
+              margin-left: 0 !important;
+          }
+          
+          .role-card {
+              width: 100% !important;
+              min-width: unset !important;
+          }
+          
+          /* Certificate Cards */
+          .certificate-cards {
+              flex-direction: column !important;
+              align-items: center !important;
+              gap: 1rem !important;
+              padding: 0 1rem !important;
+          }
+          
+          .crole-card {
+              width: 100% !important;
+              min-width: unset !important;
+          }
+          
+          .certificate-showmore-btn-row {
+              flex-direction: column;
+              align-items: center;
+          }
+          
+          /* GenAI Section */
+          .genai-outercards {
+              flex-direction: column !important;
+              align-items: center !important;
+              gap: 1rem !important;
+              padding: 0 1rem !important;
+          }
+          
+          .genai-cards {
+              margin-left: 0 !important;
+              flex-direction: column !important;
+          }
+          
+          .grole-card {
+              width: 100% !important;
+              min-width: unset !important;
+          }
+          
+          /* Degrees Section */
+          .degree-cards {
+              flex-direction: column !important;
+              align-items: center !important;
+              gap: 1rem !important;
+              padding: 0 1rem !important;
+          }
+          
+          /* Subscription Section */
+          .subscription-promo-section {
+              flex-direction: column !important;
+              text-align: center !important;
+              padding: 1.5rem !important;
+          }
+          
+          .promo-image {
+              order: -1;
+              margin-bottom: 1.5rem;
+          }
+          
+          .promo-content {
+              text-align: center;
+          }
+          
+          /* Outcomes Section */
+          .outcomes-container {
+              flex-direction: column !important;
+              text-align: center;
+          }
+          
+          .image-collage {
+              margin-bottom: 2rem;
+          }
+          
+          /* Footer */
+          .footer-grid {
+              grid-template-columns: 1fr !important;
+          }
+          
+          .footer-bottom {
+              flex-direction: column;
+              gap: 1rem;
+          }
+      }
+      
+      /* Additional specific mobile fixes */
+      @media (max-width: 480px) {
+          .top-nav-right,
+          .career-div-nav,
+          .genai-div-nav {
+              margin-left: 0 !important;
+              padding-left: 0 !important;
+              flex-direction: column !important;
+              align-items: center !important;
+          }
+          
+          .explore-button {
+              margin-right: 0 !important;
+              width: 90% !important;
+              justify-content: center !important;
+          }
+          
+          .search-container {
+              padding: 0 1rem !important;
+          }
+          
+          .top-buttons {
+              flex-direction: column !important;
+              align-items: flex-end !important;
+          }
+          
+          .certificates, .degrees {
+              padding: 1.5rem !important;
+          }
+          
+          .certificates h2, .degrees h2 {
+              font-size: 1.5rem !important;
+          }
+      }
+  </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    
+        <!-- <nav class="top-nav">
+            <div class="audience-nav">
+                <a href="index.html">For Individuals</a>
+                <a href="Business.html">For Businesses</a>
+                <a href="campus.html" class="active">For Universities</a>
+                <a href="#">For Governments</a>
+            </div>
+            
+        </nav>
+    <header>
+    <div class="topsec-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/coursera_logo.png" alt="Coursera">
+            </a>
+        </div>
+
+        <button class="mobile-menu-toggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="main-nav">
+            <button class="explore-button">Explore</button> -->
+            <!-- Explore Dropdown Menu -->
+            <!-- <div class="explore-dropdown">
+                <div class="dropdown-section">
+                    <h3>Explore roles</h3>
+                    <a href="#">Data Analyst</a>
+                    <a href="#">Project Manager</a>
+                    <a href="#">Cyber Security Analyst</a>
+                    <a href="#">Data Scientist</a>
+                    <a href="#">Business Intelligence Analyst</a>
+                    <a href="#">Digital Marketing Specialist</a>
+                    <a href="#">UI / UX Designer</a>
+                    <a href="#">Machine Learning Engineer</a>
+                    <a href="#">Social Media Specialist</a>
+                    <a href="#">Computer Support Specialist</a>
+                    <a href="#" class="view-all">View all</a>
+                </div>
+                <div class="dropdown-section">
+                    <h3>Explore categories</h3>
+                    <a href="#">Business</a>
+                    <a href="#">Data Science</a>
+                    <a href="#">Information Technology</a>
+                    <a href="#">Computer Science</a>
+                    <a href="#">Life Sciences</a>
+                    <a href="#">Physical Science and Engineering</a>
+                    <a href="#">Personal Development</a>
+                    <a href="#">Social Sciences</a>
+                    <a href="#">Language Learning</a>
+                    <a href="#">Arts and Humanities</a>
+                    <a href="#" class="view-all">View all</a>
+                </div>
+                <div class="dropdown-section">
+                    <h3>Earn a Professional Certificate</h3>
+                    <a href="#">Business</a>
+                    <a href="#">Computer Science</a>
+                    <a href="#">Data Science</a>
+                    <a href="#">Information Technology</a>
+                    <a href="#" class="view-all">View all</a>
+                    
+                    <h3 style="margin-top: 20px;">Earn an online degree</h3>
+                    <a href="#">Bachelor's Degrees</a>
+                    <a href="#">Master's Degrees</a>
+                    <a href="#">Postgraduate Programs</a>
+                    <a href="#" class="view-all">View all</a>
+                </div>
+                <div class="dropdown-section">
+                    <h3>Explore trending skills</h3>
+                    <a href="#">Python</a>
+                    <a href="#">Artificial Intelligence</a>
+                    <a href="#">Excel</a>
+                    <a href="#">Machine Learning</a>
+                    <a href="#">SQL</a>
+                    <a href="#">Project Management</a>
+                    <a href="#">Power BI</a>
+                    <a href="#">Marketing</a>
+                    
+                    <h3 style="margin-top: 20px;">Prepare for a certification exam</h3>
+                    <a href="#" class="view-all">View all</a>
+                </div>
+            </div>
+            <a href="#">Online Degrees</a>
+            <a href="#">Careers</a>
+        </div>
+        <div class="auth-nav">
+            <a href="login.html" class="login">Log In</a>
+            <a href="signup1.html" class="signup">Join for Free</a>
+        </div>
+    </div>
+    </header> -->
+
+    <nav class="top-nav">
+        <div class="audience-nav">
+            <a href="index.html" >For Individuals</a>
+            <a href="Business.html" >For Businesses</a>
+            <a href="campus.html" class="active">For Universities</a>
+            <a href="goverment.html">For Governments</a>
+        </div>    
+    </nav>
+    <!-- Header -->
+    <header class="header">
+        
+        <div class="main-nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="#" class="logo-link">
+                      <img src="images/coursera_logo.png" alt="Coursera for Business">
+                      <span>For Campus</span>
+                    </a>
+                </div>
+                  
+                <nav class="primary-nav">
+                    <ul>
+                        <li><a href="#">Why Coursera</a></li>
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">For Teams</a></li>
+                        <!-- <li><a href="#">Compare Plans</a></li> -->
+                    </ul>
+                </nav>
+                <div class="cta-button">
+                    <a href="contactus.html" class="btn btn-primary">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <!-- In campus.html, replace the existing sections in the body -->
+
+<!-- 1. Hero Section -->
+<section class="campus-hero">
+    <div class="hero-content">
+        <h1>Empower your institution with world-class learning</h1>
+        <p>Attract and retain students and faculty with transformative skills development.</p>
+        <a href="contactus.html" class="cta-button">Contact our sales team</a>
+    </div>
+    <div class="hero-image">
+        <img src="images/campus images/groupofstudents.png" alt="A group of students collaborating in a modern university setting.">
+    </div>
+</section>
+
+<!-- 2. "Trusted By" Logo Strip -->
+<section class="trusted-by">
+    <h2 style="text-align: center;padding-top: 60px; padding-bottom: 30px;">Trusted by over 3,000 universities and colleges worldwide</h2>
+    <div class="logo-strip">
+        <!-- Add university logos here -->
+        <img src="images/Princeton_University_logo.png" alt="University Logo">
+        <img src="images/AiAgent.png" alt="University Logo">
+        <img src="images/impcollegelondon_logo1.png" alt="University Logo">
+        <img src="images/stanford_logo1.png" alt="University Logo">
+    </div>
+</section>
+
+<!-- 3. Interactive Tabbed Section -->
+<section class="campus-features">
+    <h2>What you can do with Coursera for Campus</h2>
+    <!-- The navigation for the tabs -->
+    <div id="features-tabs-nav" class="tabs-nav">
+        <button class="tab-link active" data-target="tab-1">Upskill students</button>
+        <button class="tab-link" data-target="tab-2">Deliver job-relevant learning</button>
+        <button class="tab-link" data-target="tab-3">Author content with AI</button>
+        <button class="tab-link" data-target="tab-4">Track skills development</button>
+    </div>
+    <!-- The content panes that change -->
+    <div id="features-tabs-content" class="tabs-content">
+        <div id="tab-1" class="tab-pane active">
+            <img src="images/campus images/Studentslearningnewskills.png" alt="Students learning new skills.">
+            <div class="pane-text">
+                <h3>Bridge skills gaps with industry-led content</h3>
+                <p>Help students develop the skills and credentials they need for the modern workforce with courses from 275+ leading universities and companies.</p>
+            </div>
+        </div>
+        <div id="tab-2" class="tab-pane">
+            <img src="images/campus images/Astudentgettingajoboffer.png" alt="A student getting a job offer.">
+            <div class="pane-text">
+                <h3>Enhance employability</h3>
+                <p>Provide hands-on learning experiences and Professional Certificates from industry leaders like Google, IBM, and Meta to prepare students for in-demand careers.</p>
+            </div>
+        </div>
+        <div id="tab-3" class="tab-pane">
+            <img src="images/campus images/AItoolshelpingcreatecontent..png" alt="AI tools helping create content.">
+            <div class="pane-text">
+                <h3>Build courses with generative AI</h3>
+                <p>Use Coursera’s AI-powered course building tools to rapidly create high-quality, custom courses and assessments for your institution.</p>
+            </div>
+        </div>
+        <div id="tab-4" class="tab-pane">
+            <img src="images/campus images/Analyticsdashboardshowingskillprogress..png" alt="Analytics dashboard showing skill progress.">
+            <div class="pane-text">
+                <h3>Measure and improve your programs</h3>
+                <p>Use our skills dashboard to track student progress, identify learning trends, and ensure your curriculum aligns with industry needs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4. Content Grid Section -->
+<section class="content-grid-section">
+    <h2>Access world-class content from 275+ leading universities and companies</h2>
+    <div class="content-grid">
+        <div class="content-card"><img src="images/google-logo.png" alt="Google"></div>
+        <div class="content-card"><img src="images/Microsolft_logo.png" alt="Microsoft"></div>
+        <div class="content-card"><img src="images/ibm-logo.png" alt="IBM"></div>
+    </div>
+</section>
+
+<!-- 5. Report Promo Section -->
+<section class="report-promo">
+    <div class="promo-image">
+        <img src="images/campus images/global.png" alt="2024 Global Skills Report Cover">
+    </div>
+    <div class="promo-text">
+        <h3>Insights from the 2024 Global Skills Report</h3>
+        <p>Discover the top skills trending globally and in your country. Use the latest data to inform your curriculum and guide your students.</p>
+        <a href="#" class="text-link">Get the report →</a>
+    </div>
+</section>
+
+
+
+
+<!-- 6. Get in Touch Section -->
+<section class="contact-form-section">
+    <div class="container">
+        <!-- Left Column: Information -->
+        <div class="contact-info">
+            <h2>Get in touch with our sales team</h2>
+            <p>Our team can help you create a world-class learning experience for your students, faculty, and staff.</p>
+            <ul class="benefits-list">
+                <li class="benefit-item">
+                    
+                    <div class="benefit-text">
+                        <h3>Curated course collections</h3>
+                        <p>Access 10,000+ courses, Specializations, and Professional Certificates.</p>
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <div class="benefit-text">
+                        <h3>Actionable skills analytics</h3>
+                        <p>Track learner progress and benchmark against peer organizations.</p>
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <div class="benefit-text">
+                        <h3>Seamless LMS integrations</h3>
+                        <p>Integrate Coursera with your existing learning management system.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Column: The Form -->
+        <div class="contact-form-wrapper">
+            <form id="sales-contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name *</label>
+                        <input type="text" id="first-name" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name *</label>
+                        <input type="text" id="last-name" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Work Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="job-title">Job Title *</label>
+                    <input type="text" id="job-title" name="jobTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country/Region *</label>
+                    <select id="country" name="country" required>
+                        <option value="">Please Select</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="IN">India</option>
+                        <option value="AU">Australia</option>
+                    </select>
+                </div>
+                <div id="form-feedback" class="form-feedback-message"></div>
+                <button type="submit" class="cta-button">Submit</button>
+                <p class="form-fine-print">By submitting this form, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Coursera</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">What We Offer</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#">Coursera Plus</a></li>
+                    <li><a href="#">Professional Certificates</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="#">Learners</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Beta Testers</a></li>
+                    <li><a href="#">Translators</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Tech Blog</a></li>
+                    <li><a href="#">Teaching Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>More</h3>
+                <ul>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                
+                <div class="app-downloads">
+                    <a href="#"><img src="images/appstore1.png"  width="100" height="100" alt="Download on App Store"></a>
+                    <a href="#"><img src="images/playstore.png" width="100" height="100" alt="Get it on Google Play"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Coursera Inc. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><span class="social-icon"><img src="https://www.citypng.com/public/uploads/preview/round-black-facebook-fb-logo-icon-sign-701751695134781upkxjlqwck.png"  alt="facebook"> </span></a>
+                <a href="#" aria-label="LinkedIn"><span class="social-icon"><img src="images/linkedin1.png" alt="LinkedIn"></span></a>
+                <a href="#" aria-label="Twitter"><span class="social-icon"><img src="images/twitter.png" alt="twitter"> </span></a>
+                <a href="#" aria-label="Instagram"><span class="social-icon"><img src="images/insta.png" alt="Instagram"></span></a>
+                <a href="#" aria-label="YouTube"><span class="social-icon"><img src="images/ticktok.png" alt="Ticktok"></span></a>
+            </div>
+        </div>
+        <!-- <p class="footnote">¹ Median salary and job opening data are sourced from Lightcast™ Job Postings Report. Content Creator, Machine Learning Engineer and Salesforce Development Representative (1/1/2024 - 12/31/2024) All other job roles (6/1/2024 - 6/1/2025)</p> -->
+    </footer>
+
+    <!--CHATBOT START-->
+    <button id="chat-toggle-button" aria-label="Open chat">💬</button>
+
+    <div id="chat-container" class="hidden">
+        <div id="chat-header">
+            <h3>Coursera Helper</h3>
+            <button id="chat-close-button" aria-label="Close chat">×</button>
+        </div>
+        <div id="chat-messages">
+            <div class="bot-message">
+                <p>Hello! How can I help you today? You can ask about 'pricing', 'courses', or 'financial aid'.</p>
+            </div>
+        </div>
+        <div id="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button id="chat-send-button">Send</button>
+        </div>
+    </div>
+    <!--CHATBOT END-->
+
+    <!--  NOTEPAD START -->
+    <button id="notepad-toggle-button" aria-label="Open notes">📝</button>
+
+    <div id="notepad-container" class="hidden">
+        <div id="notepad-header">
+            <h3>My Notes</h3>
+            <button id="notepad-close-button" aria-label="Close notes">×</button>
+        </div>
+        <div id="notepad-content">
+            <textarea id="notepad-textarea" placeholder="Start typing your notes here..."></textarea>
+        </div>
+        <div id="notepad-footer">
+            <p id="notepad-status">Notes are saved automatically.</p>
+        </div>
+    </div>
+    <!-- NOTEPAD END -->
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/campus-script.js"></script>
+</body>
+</html>

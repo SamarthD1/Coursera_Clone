@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursera | Degrees, Certificates, & Free Online Courses</title>
+    <link rel="stylesheet" href="css/style_responsive.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      /*MOBILE RESPONSIVENESS ENHANCEMENTS */
+      
+      /* Global mobile adjustments */
+      @media (max-width: 768px) {
+          /* Reset body font size */
+          body {
+              font-size: 14px !important;
+          }
+          
+          /* Header & Navigation */
+          header, .top-nav, .topsec-nav, .main-nav, .auth-nav {
+              flex-direction: column !important;
+              align-items: center !important;
+              text-align: center;
+              padding: 10px !important;
+              gap: 10px;
+          }
+          
+          .main-nav a, .auth-nav a, 
+          .career-div-navbuttons, .career-div-popular, 
+          .career-div-level, .explore-button, 
+          .explore-all, .certificate-showmore-btn {
+              font-size: 0.95rem !important;
+              margin: 5px !important;
+              width: 100% !important;
+          }
+          
+          .explore-button {
+              margin-right: 0 !important;
+          }
+          
+          .explore-dropdown {
+              position: static !important;
+              width: 100% !important;
+              grid-template-columns: 1fr !important;
+              padding: 1rem !important;
+          }
+          
+          /* Hero Section */
+          .hero {
+              flex-direction: column !important;
+              padding: 2rem 1rem !important;
+          }
+          
+          .hero-content h1 {
+              font-size: 1.75rem !important;
+          }
+          
+          .hero-content p {
+              font-size: 1rem !important;
+          }
+          
+          .search-container input {
+              font-size: 0.9rem !important;
+              padding: 0.75rem !important;
+          }
+          
+          /* Career Roles */
+          .career-roles {
+              flex-direction: column !important;
+              align-items: center !important;
+              gap: 1rem !important;
+              padding: 0 1rem !important;
+          }
+          
+          .role-cards {
+              margin-left: 0 !important;
+          }
+          
+          .role-card {
+              width: 100% !important;
+              min-width: unset !important;
+          }
+          
+          /* Certificate Cards */
+          .certificate-cards {
+              flex-direction: column !important;
+              align-items: center !important;
+              gap: 1rem !important;
+              padding: 0 1rem !important;
+          }
+          
+          .crole-card {
+              width: 100% !important;
+              min-width: unset !important;
+          }
+          
+          .certificate-showmore-btn-row {
+              flex-direction: column;
+              align-items: center;
+          }
+          
+          /* GenAI Section */
+          .genai-outercards {
+              flex-direction: column !important;
+              align-items: center !important;
+              gap: 1rem !important;
+              padding: 0 1rem !important;
+          }
+          
+          .genai-cards {
+              margin-left: 0 !important;
+              flex-direction: column !important;
+          }
+          
+          .grole-card {
+              width: 100% !important;
+              min-width: unset !important;
+          }
+          
+          /* Degrees Section */
+          .degree-cards {
+              flex-direction: column !important;
+              align-items: center !important;
+              gap: 1rem !important;
+              padding: 0 1rem !important;
+          }
+          
+          /* Subscription Section */
+          .subscription-promo-section {
+              flex-direction: column !important;
+              text-align: center !important;
+              padding: 1.5rem !important;
+          }
+          
+          .promo-image {
+              order: -1;
+              margin-bottom: 1.5rem;
+          }
+          
+          .promo-content {
+              text-align: center;
+          }
+          
+          /* Outcomes Section */
+          .outcomes-container {
+              flex-direction: column !important;
+              text-align: center;
+          }
+          
+          .image-collage {
+              margin-bottom: 2rem;
+          }
+          
+          /* Footer */
+          .footer-grid {
+              grid-template-columns: 1fr !important;
+          }
+          
+          .footer-bottom {
+              flex-direction: column;
+              gap: 1rem;
+          }
+      }
+      
+      /* Additional specific mobile fixes */
+      @media (max-width: 480px) {
+          .top-nav-right,
+          .career-div-nav,
+          .genai-div-nav {
+              margin-left: 0 !important;
+              padding-left: 0 !important;
+              flex-direction: column !important;
+              align-items: center !important;
+          }
+          
+          .explore-button {
+              margin-right: 0 !important;
+              width: 90% !important;
+              justify-content: center !important;
+          }
+          
+          .search-container {
+              padding: 0 1rem !important;
+          }
+          
+          .top-buttons {
+              flex-direction: column !important;
+              align-items: flex-end !important;
+          }
+          
+          .certificates, .degrees {
+              padding: 1.5rem !important;
+          }
+          
+          .certificates h2, .degrees h2 {
+              font-size: 1.5rem !important;
+          }
+      }
+  </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    
+        <nav class="top-nav">
+            <div class="audience-nav">
+                <a href="index.html" class="active">For Individuals</a>
+                <a href="Business.html">For Businesses</a>
+                <a href="campus.html">For Universities</a>
+                <a href="goverment.html">For Governments</a>
+            </div>
+            
+        </nav>
+    <header>
+    <div class="topsec-nav">
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/coursera_logo.png" alt="Coursera">
+            </a>
+        </div>
+
+        <button class="mobile-menu-toggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="main-nav">
+            <button class="explore-button">Explore</button> 
+            <!-- Explore Dropdown Menu -->
+            <div class="explore-dropdown">
+                <div class="dropdown-section">
+                    <h3>Explore roles</h3>
+                    <a href="#">Data Analyst</a>
+                    <a href="#">Project Manager</a>
+                    <a href="#">Cyber Security Analyst</a>
+                    <a href="#">Data Scientist</a>
+                    <a href="#">Business Intelligence Analyst</a>
+                    <a href="#">Digital Marketing Specialist</a>
+                    <a href="#">UI / UX Designer</a>
+                    <a href="#">Machine Learning Engineer</a>
+                    <a href="#">Social Media Specialist</a>
+                    <a href="#">Computer Support Specialist</a>
+                    <a href="#" class="view-all">View all</a>
+                </div>
+                <div class="dropdown-section">
+                    <h3>Explore categories</h3>
+                    <a href="#">Business</a>
+                    <a href="#">Data Science</a>
+                    <a href="#">Information Technology</a>
+                    <a href="#">Computer Science</a>
+                    <a href="#">Life Sciences</a>
+                    <a href="#">Physical Science and Engineering</a>
+                    <a href="#">Personal Development</a>
+                    <a href="#">Social Sciences</a>
+                    <a href="#">Language Learning</a>
+                    <a href="#">Arts and Humanities</a>
+                    <a href="#" class="view-all">View all</a>
+                </div>
+                <div class="dropdown-section">
+                    <h3>Earn a Professional Certificate</h3>
+                    <a href="#">Business</a>
+                    <a href="#">Computer Science</a>
+                    <a href="#">Data Science</a>
+                    <a href="#">Information Technology</a>
+                    <a href="#" class="view-all">View all</a>
+                    
+                    <h3 style="margin-top: 20px;">Earn an online degree</h3>
+                    <a href="#">Bachelor's Degrees</a>
+                    <a href="#">Master's Degrees</a>
+                    <a href="#">Postgraduate Programs</a>
+                    <a href="#" class="view-all">View all</a>
+                </div>
+                <div class="dropdown-section">
+                    <h3>Explore trending skills</h3>
+                    <a href="#">Python</a>
+                    <a href="#">Artificial Intelligence</a>
+                    <a href="#">Excel</a>
+                    <a href="#">Machine Learning</a>
+                    <a href="#">SQL</a>
+                    <a href="#">Project Management</a>
+                    <a href="#">Power BI</a>
+                    <a href="#">Marketing</a>
+                    
+                    <h3 style="margin-top: 20px;">Prepare for a certification exam</h3>
+                    <a href="#" class="view-all">View all</a>
+                </div>
+            </div>
+            <a href="#">Online Degrees</a>
+            <a href="#">Careers</a>
+        </div>
+        <div class="auth-nav">
+            <a href="login.html" class="login">Log In</a>
+            <a href="signup1.html" class="signup">Join for Free</a>
+        </div>
+    </div>
+    </header>
+    
+    <!-- AI Skills Banner -->
+    <div class="banner">
+        <p>Tap into learning that focuses on AI. Coursera is your resource for <a href="#">AI skills development</a>.</p>
+        <button class="close-banner" aria-label="Close banner">×</button>
+    </div>
+
+    <!-- Hero Section (MODIFIED: Search bar and trending links have been removed) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Learn without limits</h1>
+            <p>Start, switch, or advance your career with more than 10,000 courses, Professional Certificates, and degrees from world-class universities and companies.</p>
+            <!-- The search and trending sections that were here have been moved below -->
+        </div>
+        <div class="hero-image">
+            <img src="images/hero-image.jpg" alt="Student learning online">
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+     <hr>
+    <section class="partners">
+        
+        <div class="partner-logos">
+            <div class="partners">
+            <h2>Learn from 350+ organizations</h2>
+            </div>
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Google"></a>
+            <a href="#"><img src="images/stanford_logo1.png" alt="stanford_logo"></a>
+            <a href="#"><img src="images/IBM_logo.png" alt="IBM_logo"></a>
+            <a href="#"><img src="images/impcollegelondon_logo1.png" alt="Imperial College London"></a>
+            <a href="#"><img src="images/Duke_logo.png" alt="Duke University"></a>
+            <a href="#"><img src="images/Penn_logo.png" alt="Penn_logo"></a>
+            <a href="#"><img src="images/Meta_logo.png" alt="Meta"></a>
+            <a href="#"><img src="images/AWS_logo.png" alt="Amazon Web Services"></a>
+            <a href="#"><img src="images/Microsolft_logo.png" alt="Microsoft"></a>
+        </div>
+    </section>
+
+    <!-- DYNAMIC CATALOG SECTION (MODIFIED: Now includes Search and Trending) -->
+    <section class="dynamic-catalog">
+        <h2>Explore Our Full Catalog</h2>
+        <p>Use the search bar, trending topics, or filters below to find the perfect course for you.</p>
+        
+        <!-- Search Container - MOVED HERE -->
+        <div class="search-container">
+            <input type="text" id="course-search" placeholder="Search for courses, certificates, and more">
+            <button aria-label="Submit Search">
+                <span class="search-icon">🔍</span>
+            </button>
+        </div>
+
+        <!-- Trending Topics - MOVED HERE and will be made functional -->
+        <div class="trending">
+            <span>Trending:</span>
+            <a href="#">Machine Learning</a>
+            <a href="#">Project Management</a>
+            <a href="#">Data Analytics</a>
+            <a href="#">Cybersecurity</a>
+            <a href="#">Digital Marketing</a>
+            <a href="#">AI For Everyone</a>
+        </div>
+        
+        <!-- Filter buttons -->
+        <div id="filters" class="catalog-filters">
+            <button data-category="all" class="active">All Categories</button>
+            <button data-category="web-dev">Web Development</button>
+            <button data-category="data-science">Data Science</button>
+            <button data-category="business">Business</button>
+        </div>
+
+        <!-- The grid where JavaScript will place the course cards -->
+        <div id="course-grid" class="catalog-grid">
+            <!-- JavaScript will automatically create course cards here -->
+        </div>
+    </section>
+    <!-- END SECTION -->
+
+    <!-- SUBSCRIPTION PROMO SECTION -->
+    <section class="subscription-promo-section">
+        <div class="promo-content">
+            <h2>Get unlimited access with Coursera Plus</h2>
+            <p>Learn anything, anytime. Save money with a subscription plan that gives you access to over 7,000 courses, projects, and certificates.</p>
+            <ul class="feature-list">
+                <li>Unlimited access to the full catalog</li>
+                <li>Earn a certificate for every course you complete</li>
+                <li>Learn at your own pace on any device</li>
+            </ul>
+            <a href="plus.html" class="promo-cta">Learn More About Plus</a>
+        </div>
+        <div class="promo-image">
+            <!-- You can change this image to a more suitable one if you have it -->
+            <img src="images/outcomes1.png" alt="A person working on a laptop">
+        </div>
+      </section>
+      <!-- END OF  SECTION -->
+
+    <!-- Career Roles Section -->
+     <div class="career-div">
+        <nav class="career-div-nav">
+            <!-- <button class="career-div-level">Beginner ▼</button> -->
+            <div class="career-div-dropdown">
+                <button class="career-div-level" id="careerDropdownButton">Beginner ▼</button>
+                <div id="career-div-dropdownContent" class="career-div-dropdown-content">
+                  <a href="#">Beginner</a>
+                  <a href="#">Intermediate</a>
+                  <a href="#">Advanced</a>
+                </div>
+            </div>
+            <div style="width: 2px; height: 20px; background-color: #000;"></div>
+            <button class="career-div-popular">Popular</button>
+            <button class="career-div-navbuttons">Software Engineering & IT</button>
+            <button class="career-div-navbuttons">Business</button>
+            <button class="career-div-navbuttons">Sales & Marketing</button>
+            <button class="career-div-navbuttons">Data Science & Analytics</button>
+            <button class="career-div-navbuttons">Healthcare</button>
+
+        </nav>
+    <section class="career-roles">
+    
+        <a href="chooseyourole.html" style="text-decoration: none; color: inherit;">
+        <div style="padding-left: 10px;">
+        <h2>Choose your role</h2><br>
+        <p>Gain the knowledge and skills you need to advance.</p>
+        <button class="explore-all">Explore all roles</button>
+        </div>
+        <div class="role-cards">
+            <div class="role-card">
+                <img src="images/careerrole1.png" alt="data Analyst">
+                <h3>Data Analyst</h3>
+                <p>A Data Analyst collects, cleans, and interprets data, using tools like Excel, SQL, and Tableau to analyze trends and provide insights for decisions.</p>
+                <div class="role-details">
+                    <p><strong>If you like:</strong> analyzing data to find insights, creating reports and visualizations, working with spreadsheets and databases</p>
+                    <p><strong>$97,152</strong> median salary ¹</p>
+                    <p><strong>69,775</strong> jobs available ¹</p>
+                    <strong>Credentials</strong>
+                    <!-- <p><a href="#"><img src="images/ibm-logo.png"> IBM Data Analyst</a></p>
+                    <p><a href="#">DeepLearning Data Analytics</a></p>
+                    <p><a href="#">+ 5 more</a></p> -->
+                    <div class="role-details-icons">
+                        <img src="images/ibm-logo.png">
+                        <p><a href="#">IBM Data Analyst</a></p>
+                    </div>
+                    <div class="role-details-icons">
+                        <img src="images/deeplearning.png">
+                        <p><a href="#">DeepLearning.AI Data Analytics</a></p>
+                    </div>
+                    <div class="role-details-icons">
+                        <p><a href="#">+ 5 more</a></p>
+                    </div>
+                      
+                </div>
+            </div>
+            </a>
+            <a href="chooseyourrole2.html" style="text-decoration: none; color: inherit;">
+            <div class="role-card">
+                <img src="images/careerrole2.png" alt="Data Scientist">
+                <h3>Data Scientist</h3>
+                <p>A Data Scientist analyzes large datasets to uncover insights, using statistics, machine learning, and visualization to inform business strategies.</p>
+                <div class="role-details">
+                    <p><strong>If you like:</strong> analyzing complex datasets, developing machine learning models, solving statistical problems</p>
+                    <p><strong>$144,256</strong> median salary ¹</p>
+                    <p><strong>52,408</strong> jobs available ¹</p>
+
+                    <strong>Credentials</strong>
+                    <div class="role-details-icons">
+                        <img src="images/ibm-logo.png">
+                        <p><a href="#">IBM Data Science</a></p>
+                    </div>
+                    
+                </div>
+            </div>
+            </a>
+            
+            <a href="chooseyourrole3.html" style="text-decoration: none; color: inherit;">
+            <div class="role-card">
+                <img src="images/careerrole3.png" alt="Machine Learning Engineer">
+                <h3>Machine Learning Engineer</h3>
+                <p>A Machine Learning Engineer builds and optimizes algorithms that enable computers to learn from data, using large datasets and neural networks.</p>
+                <div class="role-details">
+                    <p><strong>If you like:</strong> developing machine learning models, working with large datasets, coding in python or r</p>
+                    <p><strong>$169,700</strong> median salary ¹</p>
+                    <p><strong>6,963</strong> jobs available ¹</p>
+
+                    <strong>Credentials</strong>
+                    <div class="role-details-icons">
+                        <img src="images/deeplearning.png">
+                        <p><a href="#">Machine Learning</a></p>
+                    </div>
+                    <div class="role-details-icons">
+                        <img src="images/AiAgent.png">
+                        <p><a href="#">AI Agent developer</a></p>
+                    </div>
+                    <div class="role-details-icons">
+                        <p><a href="#">+ 1 more</a></p>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </div>
+    </section>
+    </div>
+
+    <!-- Certificates Section -->
+    <section class="certificates">
+        <p style="font-family: Winky Rough; font-size: 20px;"><b>Specializations and Professional Certificates</b></p>
+        <p style="font-family: Winky Rough ; font-size: 40px; font-weight: 800px;">Most Popular Certificates</p>
+        <p style="font-size: 20px;">Explore our most popular programs, get job-ready for an in-demand career.</p>
+        
+        <div class="certificate-cards">
+
+            <div class="crole-card">
+                <div class="image-container">
+                  <img src="images/googledataanalyst.png" alt="Google Data Analytics" />
+                  <div class="top-buttons">
+                    <button class="btn">Free Trial</button>
+                    <button class="btn">✨New AI Skills</button>
+                  </div>
+                </div>
+              
+                <div class="clogo">
+                  <img src="images/google.png" alt="Google Logo" />
+                  <p>Google</p>
+                </div>
+              
+                <p><strong>Google Data Analytics</strong></p>
+              
+                <div class="certificate-icon">
+                  <a href="#" class="certificate-icon">
+                    <img src="images/certificate-solid.svg" alt="Certificate Icon" />
+                    Build towards a degree 
+                  </a>
+                  <p>Professional Certificate</p>
+                </div>
+            </div>
+
+            <div class="crole-card">
+                <!-- <h3>Google Project Management</h3>
+                <p>Google</p> -->
+                <div class="image-container">
+                    <img src="images/googleproductmanage.png" alt="Google Data Analytics" />
+                    <div class="top-buttons">
+                      <button class="btn">Free Trial</button>
+                      <button class="btn">✨New AI Skills</button>
+                    </div>
+                  </div>
+                
+                  <div class="clogo">
+                    <img src="images/google.png" alt="Google Logo" />
+                    <p>Google</p>
+                  </div>
+                
+                  <p><strong>Google Project Management</strong></p>
+                
+                  <div class="certificate-icon">
+                    <a href="#" class="certificate-icon">
+                      <img src="images/certificate-solid.svg" alt="Certificate Icon" />
+                      Build towards a degree 
+                    </a>
+                    <p>Professional Certificate</p>
+                  </div>
+            </div>
+
+
+            <div class="crole-card">
+                <!-- <h3>Meta Social Media Marketing</h3>
+                <p>Meta</p> -->
+                <div class="image-container">
+                    <img src="images/googleItsupport.png" alt="Google Data Analytics" />
+                    <div class="top-buttons">
+                      <button class="btn">Free Trial</button>
+                      <button class="btn">✨New AI Skills</button>
+                    </div>
+                  </div>
+                
+                  <div class="clogo">
+                    <img src="images/google.png" alt="Google Logo" />
+                    <p>Google</p>
+                  </div>
+                
+                  <p><strong>Meta Social Media Marketing</strong></p>
+                
+                  <div class="certificate-icon">
+                    <a href="#" class="certificate-icon">
+                      <img src="images/certificate-solid.svg" alt="Certificate Icon" />
+                      Build towards a degree 
+                    </a>
+                    <p>Professional Certificate</p>
+                  </div>
+            </div>
+
+            <div class="crole-card">
+                <!-- <h3>IBM Data Science</h3>
+                <p>IBM</p> -->
+                <div class="image-container">
+                    <img src="images/googleuiux.png" alt="Google Data Analytics" />
+                    <div class="top-buttons">
+                      <button class="btn">Free Trial</button>
+                      <button class="btn">✨New AI Skills</button>
+                    </div>
+                  </div>
+                
+                  <div class="clogo">
+                    <img src="images/google.png" alt="Google Logo" />
+                    <p>Google</p>
+                  </div>
+                
+                  <p><strong>IBM Data Science</strong></p>
+                
+                  <div class="certificate-icon">
+                    <a href="#" class="certificate-icon">
+                      <img src="images/certificate-solid.svg" alt="Certificate Icon" />
+                      Build towards a degree 
+                    </a>
+                    <p>Professional Certificate</p>
+                  </div>
+            </div>
+        </div>
+        <div class="certificate-showmore-btn-row">
+            <button class="certificate-showmore-btn">Show 8 More</button>
+            <button class="certificate-showmore-btn view-all">View All -></button>
+        </div>
+          
+    </section>
+
+    <!-- GenAI Section -->
+    <section class="genai">
+        <div class="genai-div">
+            <nav class="genai-div-nav">
+                <button class="genai-div-new">New</button>
+                <button class="career-div-navbuttons">Beginner</button>
+                <button class="career-div-navbuttons">Popular</button>
+                <button class="career-div-navbuttons">Tools</button>
+            </nav>
+            <div class="genai-outercards">
+                <div>
+                <h2>Get started <br> with GenAI</h2>
+                <p>Identify, develop, and <br> execute impactful GenAI <br> business strategies.</p>
+                <button class="genai-showmore-btn">view all GenAI -></button>
+                </div>
+                <div class="genai-cards">
+
+                    <div class="grole-card">
+                        <div class="image-container">
+                          <img src="images/genai1.png" alt="Google Data Analytics" />
+                          <div class="top-buttons">
+                            <button class="btn">Free Trial</button>
+                          </div>
+                        </div>
+                      
+                        <div class="clogo">
+                          <img src="images/AiAgent.png" alt="Google Logo" />
+                          <p>Vanderbilt University</p>
+                        </div>
+                      
+                        <p><strong>Agentic AI and AI Agents for Leaders</strong></p>
+                      
+                        <div class="certificate-icon">
+                          
+                          <p>Specialization</p>
+                        </div>
+                    </div>
+
+                    <div class="grole-card">
+                        <div class="image-container">
+                          <img src="images/genai2.png" alt="Google Data Analytics" />
+                          <div class="top-buttons">
+                            <button class="btn">Free Trial</button>
+                          </div>
+                        </div>
+                      
+                        <div class="clogo">
+                          <img src="images/AiAgent.png" alt="Google Logo" />
+                          <p>Vanderbilt University</p>
+                        </div>
+                      
+                        <p><strong>Agentic AI and AI Agents for Leaders</strong></p>
+                      
+                        <div class="certificate-icon">
+                          
+                          <p>Specialization</p>
+                        </div>
+                    </div>
+
+  
+                    <div class="grole-card">
+                        <div class="image-container">
+                          <img src="images/genai3.png" alt="Google Data Analytics" />
+                          <div class="top-buttons">
+                            <button class="btn">Free Trial</button>
+                          </div>
+                        </div>
+                      
+                        <div class="clogo">
+                          <img src="images/AiAgent.png" alt="Google Logo" />
+                          <p>Vanderbilt University</p>
+                        </div>
+                      
+                        <p><strong>Agentic AI and AI Agents for Leaders</strong></p>
+                      
+                        <div class="certificate-icon">
+                          
+                          <p>Specialization</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Course Section -->
+    <section class="degrees">
+        <p style="font-family: Winky Rough; font-size: 20px;"><b>Courses and Professional Certificates</b></p>
+        <p style="font-family: Winky Rough ; font-size: 40px; font-weight: 800px;">New on Coursera</p>
+        <p style="font-size: 20px;">Explore our newest programs, focused on delivering in-demand skills.</p>
+        
+        <div class="certificate-cards">
+            
+            <div class="crole-card">
+                <div class="image-container">
+                  <img src="images/degree1.png" alt="SAP" />
+                  <div class="top-buttons">
+                    <button class="btn">Free Trial</button>
+                  </div>
+                </div>
+              
+                <div class="clogo">
+                  <img src="images/SAP.png" alt="SAP" />
+                  <p>SAP</p>
+                </div>
+              
+                <p><strong>SAP Business Analyst</strong></p>
+              
+                <div class="certificate-icon">
+                  <p>Professional Certificate</p>
+                </div>
+            </div>
+
+            <div class="crole-card">
+                <div class="image-container">
+                    <img src="images/degree2.png" alt="Google Data Analytics" />
+                    <div class="top-buttons">
+                      <button class="btn">Free Trial</button>
+                    </div>
+                  </div>
+                
+                  <div class="clogo">
+                    <img src="images/Microsolft_logo.png" alt="Microsoft Logo" />
+                    <p>Microsoft</p>
+                  </div>
+                
+                  <p><strong>Microsoft AI Product Manager</strong></p>
+                
+                  <div class="certificate-icon">
+                    <p>Professional Certificate</p>
+                  </div>
+            </div>
+
+
+            <div class="crole-card">
+                <div class="image-container">
+                    <img src="images/degree3.png" alt="AI Agent" />
+                    <div class="top-buttons">
+                      <button class="btn">Free Trial</button>
+                    </div>
+                  </div>
+                
+                  <div class="clogo">
+                    <img src="images/AiAgent.png" alt="Google Logo" />
+                    <p>Vanderbilt University</p>
+                  </div>
+                
+                  <p><strong>AI Agent developer</strong></p>
+                
+                  <div class="certificate-icon">
+                    <p>Professional Certificate</p>
+                  </div>
+            </div>
+
+            <div class="crole-card">
+                <div class="image-container">
+                    <img src="images/degree4.png" alt="Google Data Analytics" />
+                    <div class="top-buttons">
+                      <button class="btn">Free Trial</button>
+                    </div>
+                  </div>
+                
+                  <div class="clogo">
+                    <img src="https://coursera-university-assets.s3.amazonaws.com/57/2f1c35bd4a4a6d94bde7d622267b9c/Partner-landing-page-Logo-2.png" alt="Google Logo" />
+                    <p>SkillUp EdTech</p>
+                  </div>
+                
+                  <p><strong>IBM Ethical Hacking with open source tools</strong></p>
+                
+                  <div class="certificate-icon">
+                    <p>Professional Certificate</p>
+                  </div>
+            </div>
+        </div>
+        <div class="certificate-showmore-btn-row">
+            <button class="certificate-showmore-btn">Show 8 More</button>
+            <button class="certificate-showmore-btn view-all">View All -></button>
+        </div>
+        </div>
+        
+    </section>
+
+    <!-- Free Section -->
+    <section class="degrees">
+    <p style="font-family: Winky Rough; font-size: 20px;"><b>100% Free</b></p>
+    <p style="font-family: Winky Rough ; font-size: 40px; font-weight: 800px;">Start learning with free courses</p>
+    <p style="font-size: 20px;">Explore free online courses from the world's top universities and companies.</p>
+    
+    <div class="certificate-cards">
+        
+        <div class="crole-card">
+            <div class="image-container">
+              <img src="images/Free1.png" alt="SAP" />
+              <div class="top-buttons">
+                <button class="btn">Free</button>
+              </div>
+            </div>
+          
+            <div class="clogo">
+              <img src="https://www.fathom-consulting.com/wp-content/uploads/2023/02/SCSP-Final-logo-RGB.png" alt="special competitive studies project" />
+              <p>Special Competitive Studies Project</p>
+            </div>
+          
+            <p><strong>AI in National Security</strong></p>
+          
+            <div class="certificate-icon">
+              <p>Course</p>
+            </div>
+        </div>
+
+        <div class="crole-card">
+            <div class="image-container">
+                <img src="images/Free2.png" alt="DeepLearningAi" />
+                <div class="top-buttons">
+                  <button class="btn">Free</button>
+                </div>
+              </div>
+            
+              <div class="clogo">
+                <img src="images/deeplearning.png" alt="deeplearning" />
+                <p>DeepLearning.AI</p>
+              </div>
+            
+              <p><strong>Open Source Models with Hugging Face</strong></p>
+            
+              <div class="certificate-icon">
+                <p>Project</p>
+              </div>
+        </div>
+
+
+        <div class="crole-card">
+            <div class="image-container">
+                <img src="images/Free3.png" alt="AI Agent" />
+                <div class="top-buttons">
+                  <button class="btn">Free</button>
+                </div>
+              </div>
+            
+              <div class="clogo">
+                <img src="images/deeplearning.png" alt="deeplearning" />
+                <p>DeepLearning.AI</p>
+              </div>
+            
+              <p><strong>Introducing Multimodal Llama 3.2</strong></p>
+            
+              <div class="certificate-icon">
+                <p>Project</p>
+              </div>
+        </div>
+
+        <div class="crole-card">
+            <div class="image-container">
+                <img src="images/Free4.png" alt="Princeton University " />
+                <div class="top-buttons">
+                  <button class="btn">Free</button>
+                </div>
+              </div>
+            
+              <div class="clogo">
+                <img src="images/Princeton_University_logo.png" alt="Princeton University logo" />
+                <p>Princeton University</p>
+              </div>
+            
+              <p><strong>Algorithms, Part 1</strong></p>
+            
+              <div class="certificate-icon">
+                <p>Course</p>
+              </div>
+        </div>
+        </div>
+        <div class="certificate-showmore-btn-row">
+            <button class="certificate-showmore-btn">Show 8 More</button>
+            <button class="certificate-showmore-btn view-all">View All -></button>
+        </div>
+        </div>
+        
+    </section>
+
+
+    <!-- Degree Programs 1 -->
+    <section class="degrees">
+        <p style="font-family: Winky Rough; font-size: 20px;"><b>Degree Programs</b></p>
+        <p style="font-family: Winky Rough ; font-size: 40px; font-weight: 800px;">Get a head start on a degree today</p>
+        <p style="font-size: 20px;">With these programs, you can build valuable skills, earn career credentials, and make progress toward a degree before you even enroll.</p>
+        
+        <div class="certificate-cards">
+            
+            <div class="crole-card">
+                <div class="image-container">
+                  <img src="images/degreep1.png" alt="Google Data Analytics" />
+                </div>
+              
+                <div class="clogo">
+                  <img src="https://www.colorado.edu/brand/sites/default/files/styles/original_image_size/public/2024-12/lockup_center_0.png?itok=6qHN63TX" alt="University of Colorado Boulder" />
+                  <p>University of Colorado Boulder</p>
+                </div>
+              
+                <p><strong>Master of Science in Electrical and Computer Engineering </strong></p>
+              
+                <div class="certificate-icon">
+                    <a href="#" class="certificate-icon">
+                      <img src="images/graduation-cap-solid.svg" alt="Degree Icon" />
+                      Earn a Degree
+                    </a>
+                    <p>Degree</p>
+                  </div>
+            </div>
+
+            <div class="crole-card">
+                <div class="image-container">
+                    <img src="images/degreep2.png" alt="Google Data Analytics" />
+                  </div>
+                
+                  <div class="clogo">
+                    <img src="https://www.colorado.edu/brand/sites/default/files/styles/original_image_size/public/2024-12/lockup_center_0.png?itok=6qHN63TX" alt="University of Colorado Boulder" />
+                    <p>University of Colorado Boulder</p>
+                  </div>
+                
+                  <p><strong>Master of Engineering in Engineering Management</strong></p>
+                
+                  <div class="certificate-icon">
+                    <a href="#" class="certificate-icon">
+                      <img src="images/graduation-cap-solid.svg" alt="Degree Icon" />
+                      Earn a Degree
+                    </a>
+                    <p>Degree</p>
+                  </div>
+            </div>
+
+
+            <div class="crole-card">
+                <div class="image-container">
+                    <img src="images/degreep3.png" alt="Google Data Analytics" />
+                  </div>
+                
+                  <div class="clogo">
+                    <img src="https://www.colorado.edu/brand/sites/default/files/styles/original_image_size/public/2024-12/lockup_center_0.png?itok=6qHN63TX" alt="University of Colorado Boulder" />
+                    <p>University of Colorado Boulder</p>
+                  </div>
+                
+                  <p><strong>Master of Science in Computer Science</strong></p>
+                  <br>
+                
+                  <div class="certificate-icon">
+                    <a href="#" class="certificate-icon">
+                      <img src="images/graduation-cap-solid.svg" alt="Degree Icon" />
+                      Earn a Degree
+                    </a>
+                    <p>Degree</p>
+                  </div>
+            </div>
+
+            <div class="crole-card">
+                <div class="image-container">
+                    <img src="images/degreep4.png" alt="Google Data Analytics" />
+                  </div>
+                
+                  <div class="clogo">
+                    <img src="https://www.colorado.edu/brand/sites/default/files/styles/original_image_size/public/2024-12/lockup_center_0.png?itok=6qHN63TX" alt="University of Colorado Boulder" />
+                    <p>University of Colorado Boulder</p>
+                  </div>
+                
+                  <p><strong>Master of Science is Data Science</strong></p>
+                  <br>
+                
+                  <div class="certificate-icon">
+                    <a href="#" class="certificate-icon">
+                      <img src="images/graduation-cap-solid.svg" alt="Degree Icon" />
+                      Earn a Degree
+                    </a> 
+                    <p>Degree</p>
+                  </div>
+            </div>
+        </div>
+        <div class="certificate-showmore-btn-row">
+            <button class="certificate-showmore-btn">Show 8 More</button>
+            <button class="certificate-showmore-btn view-all">View All -></button>
+        </div>
+          
+    </section>
+
+    <!-- Degree Programs 2 -->
+
+    <section class="degrees">
+        <p style="font-family: Winky Rough; font-size: 20px;"><b>Degree Programs</b></p>
+        <p style="font-family: Winky Rough ; font-size: 40px; font-weight: 800px;">Find a top degree that fits your life</p>
+        <p style="font-size: 20px;">Breakthrough pricing on 100% online degrees from top universities.</p>
+        
+        <div class="certificate-cards">
+            
+            <div class="crole-card">
+                <div class="image-container">
+                  <img src="images/degreepp1.png" alt="Google Data Analytics" />
+                </div>
+              
+                <div class="clogo">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/12/IIT_Guwahati_Logo.svg/1200px-IIT_Guwahati_Logo.svg.png" alt="Indian Institute of Technology Guwahati" />
+                  <p>Indian Institute of Technology Guwahati</p>
+                </div>
+              
+                <p><strong>Master of Science in Electrical and Computer Engineering </strong></p>
+                <br>
+              
+                <div class="certificate-icon">
+                    <a href="#" class="certificate-icon">
+                      <img src="images/graduation-cap-solid.svg" alt="Degree Icon" />
+                      Earn a Degree
+                    </a>
+                    <p>Degree</p>
+                  </div>
+            </div>
+
+            <div class="crole-card">
+                <div class="image-container">
+                    <img src="images/degreepp2.png" alt="Google Data Analytics" />
+                  </div>
+                
+                  <div class="clogo">
+                    <img src="https://coursera-university-assets.s3.amazonaws.com/b9/c608c79b5c498a8fa55b117fc3282f/5.-Square-logo-for-landing-page---Alpha.png" alt="Birla Institute of Technology & Science, Pilani" />
+                    <p>Birla Institute of Technology & Science, Pilani</p>
+                  </div>
+                
+                  <p><strong>Master of Engineering in Engineering Management</strong></p>
+                
+                  <div class="certificate-icon">
+                    <a href="#" class="certificate-icon">
+                      <img src="images/graduation-cap-solid.svg" alt="Degree Icon" />
+                      Earn a Degree
+                    </a>
+                    <p>Degree</p>
+                  </div>
+            </div>
+
+
+            <div class="crole-card">
+                <div class="image-container">
+                    <img src="images/degreepp3.png" alt="Google Data Analytics" />
+                  </div>
+                
+                  <div class="clogo">
+                    <img src="https://cache.careers360.mobi/media/colleges/social-media/logo/logo1_dot97CU.png" alt="Indian Statistical Institute" />
+                    <p>Indian Statistical Institute</p>
+                  </div>
+                
+                  <p><strong>Master of Science in Computer Science</strong></p>
+                  <br><br>
+                
+                  <div class="certificate-icon">
+                    <a href="#" class="certificate-icon">
+                      <img src="images/graduation-cap-solid.svg" alt="Degree Icon" />
+                      Earn a Degree
+                    </a>
+                    <p>Degree</p>
+                  </div>
+            </div>
+
+            <div class="crole-card">
+                <div class="image-container">
+                    <img src="images/degreepp4.png" alt="Google Data Analytics" />
+                  </div>
+                
+                  <div class="clogo">
+                    <img src="https://mma.prnewswire.com/media/1535594/SPJIMR_Logo.jpg?p=facebook" alt="S.P. Jain Institute of Management and Research" />
+                    <p>S.P. Jain Institute of Management and Research</p>
+                  </div>
+                
+                  <p><strong>Master of Science is Data Science</strong></p>
+                  <br>
+                
+                  <div class="certificate-icon">
+                    <a href="#" class="certificate-icon">
+                      <img src="images/graduation-cap-solid.svg" alt="Degree Icon" />
+                      Earn a Degree
+                    </a> 
+                    <p>Degree</p>
+                  </div>
+            </div>
+        </div>
+
+        <div class="certificate-showmore-btn-row">
+            <button class="certificate-showmore-btn">Show 8 More</button>
+            <button class="certificate-showmore-btn view-all">View All -></button>
+        </div>
+
+        <p style="margin-top: 40px; font-size: 14px;">¹Each university determines admission and the number of pre-approved prior learning credits that may count toward the degree requirements according to institutional policies, which may consider any existing credits you may have.</p>
+          
+    </section>
+
+
+
+
+
+    <!-- Explore Categories Section -->
+
+    <section class="explore-section">
+        <h2>Explore Coursera</h2>
+
+        <div class="category-grid">
+            <!-- Row 1 -->
+            <a href="/data-science" class="category-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/id/20/80/80');"></div>
+                <div class="card-text">
+                    <h4 class="card-title">Data Science</h4>
+                    <p class="card-subtitle">425 courses</p>
+                </div>
+            </a>
+            <a href="/business" class="category-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/id/1078/80/80');"></div>
+                <div class="card-text">
+                    <h4 class="card-title">Business</h4>
+                    <p class="card-subtitle">1095 courses</p>
+                </div>
+            </a>
+            <a href="/computer-science" class="category-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/id/180/80/80');"></div>
+                <div class="card-text">
+                    <h4 class="card-title">Computer Science</h4>
+                    <p class="card-subtitle">668 courses</p>
+                </div>
+            </a>
+            <a href="/health" class="category-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/id/398/80/80');"></div>
+                <div class="card-text">
+                    <h4 class="card-title">Health</h4>
+                    <p class="card-subtitle">471 courses</p>
+                </div>
+            </a>
+            
+            <!-- Row 2 -->
+            <a href="/social-sciences" class="category-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/id/1011/80/80');"></div>
+                <div class="card-text">
+                    <h4 class="card-title">Social Sciences</h4>
+                    <p class="card-subtitle">401 courses</p>
+                </div>
+            </a>
+            <a href="/personal-development" class="category-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/id/1067/80/80');"></div>
+                <div class="card-text">
+                    <h4 class="card-title">Personal Development</h4>
+                    <p class="card-subtitle">137 courses</p>
+                </div>
+            </a>
+            <a href="/arts-humanities" class="category-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/id/1015/80/80');"></div>
+                <div class="card-text">
+                    <h4 class="card-title">Arts and Humanities</h4>
+                    <p class="card-subtitle">338 courses</p>
+                </div>
+            </a>
+            <a href="/physical-science" class="category-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/id/1041/80/80');"></div>
+                <div class="card-text">
+                    <h4 class="card-title">Physical Science and Engineering</h4>
+                    <p class="card-subtitle">413 courses</p>
+                </div>
+            </a>
+
+            <!-- Row 3 -->
+            <a href="/language-learning" class="category-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/id/119/80/80');"></div>
+                <div class="card-text">
+                    <h4 class="card-title">Language Learning</h4>
+                    <p class="card-subtitle">150 courses</p>
+                </div>
+            </a>
+            <a href="/information-technology" class="category-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/id/532/80/80');"></div>
+                <div class="card-text">
+                    <h4 class="card-title">Information Technology</h4>
+                    <p class="card-subtitle">145 courses</p>
+                </div>
+            </a>
+            <a href="/math-logic" class="category-card">
+                <div class="card-image" style="background-image: url('https://picsum.photos/id/512/80/80');"></div>
+                <div class="card-text">
+                    <h4 class="card-title">Math and Logic</h4>
+                    <p class="card-subtitle">70 courses</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Outcomes-section -->
+
+    <section class="outcomes-section">
+        <div class="outcomes-container">
+            <!-- Left Side: Image Collage -->
+            <div class="image-collage">
+                <img src="images/outcomes1.png" alt="Two people working on a robotic arm." class="collage-img-1">
+                
+                <div class="decorative-pattern">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="dashed-pattern" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(45)">
+                            <line x1="0" y1="0" x2="5" y2="0" stroke="#0056d2" stroke-width="2.5"/>
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#dashed-pattern)"/>
+                    </svg>
+                </div>
+    
+                <img src="images/outcomes2.png" alt="Two colleagues collaborating at a computer." class="collage-img-2">
+                <img src="images/outcomes3.png" alt="A professional man in a suit walking outdoors." class="collage-img-3">
+            </div>
+    
+            <!-- Right Side: Text Content -->
+            <div class="text-content">
+                <h2>Learner outcomes on Coursera</h2>
+                <p>
+                    <strong>77% of learners report career benefits,</strong> such as new
+                    skills, increased pay, and new job opportunities. 
+                    <a href="#">2023 Coursera Learner Outcomes Report</a>
+                </p>
+                <a href="#" class="btn-join" style="color: white;">Join for Free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+
+    <section class="coursera-testimonials">
+        <div class="coursera-testimonials__container">
+            <h2 class="coursera-testimonials__title">From the Coursera community</h2>
+            <p class="coursera-testimonials__subtitle">175+ million people have already joined Coursera</p>
+            
+            <div class="coursera-testimonials__cards">
+                <div class="coursera-testimonials__card">
+                    <div class="coursera-testimonials__profile">
+                        <img src="images/testimonials1.png" alt="Kenia R." class="coursera-testimonials__avatar">
+                        <h3 class="coursera-testimonials__name">Kenia R.</h3>
+                        <p class="coursera-testimonials__location">United States</p>
+                        <div class="coursera-testimonials__separator"></div>
+                    </div>
+                    <blockquote class="coursera-testimonials__quote">
+                        "Being a mother — especially a working mother means I'm constantly trying to juggle my schedule, my kids' schedules, and work. I am very grateful for the flexible and remote learning programs that Coursera has to offer."
+                    </blockquote>
+                </div>
+                
+                <div class="coursera-testimonials__card">
+                    <div class="coursera-testimonials__profile">
+                        <img src="images/testimonial2.png" alt="Ryan L." class="coursera-testimonials__avatar">
+                        <h3 class="coursera-testimonials__name">Ryan L.</h3>
+                        <p class="coursera-testimonials__location">United States</p>
+                        <div class="coursera-testimonials__separator"></div>
+                    </div>
+                    <blockquote class="coursera-testimonials__quote">
+                        "From taking courses on Coursera, I gained a deep understanding of the UX Design process from start to finish. With the knowledge I gained, I feel prepared for entry-level jobs and internships. I've been able to apply the skills and knowledge I gained to multiple projects and work experiences."
+                    </blockquote>
+                </div>
+                
+                <div class="coursera-testimonials__card">
+                    <div class="coursera-testimonials__profile">
+                        <img src="images/testimonial3.png" alt="Vishal V." class="coursera-testimonials__avatar">
+                        <h3 class="coursera-testimonials__name">Vishal V.</h3>
+                        <p class="coursera-testimonials__location">India</p>
+                        <div class="coursera-testimonials__separator"></div>
+                    </div>
+                    <blockquote class="coursera-testimonials__quote">
+                        "I really enjoyed my courses. The quizzes, videos, and quick labs provided helpful hands-on experience. Learning on Coursera has given me the confidence and ability to excel in my career. I love this feeling."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Section -->
+
+    <!-- START: Coursera Promo Section -->
+    <section class="coursera-business-promo">
+        <div class="c-b-promo__container">
+            <div class="c-b-promo__text-content">
+                <h1>Drive your business forward by empowering your talent</h1>
+                <p>Train teams with industry-leading experts and universities, enhanced by AI tools and recognized credentials.</p>
+                <a href="#" class="c-b-promo__btn">Discover Coursera for Business</a>
+                <p class="c-b-promo__small-link">
+                    Upskill a small team?
+                    <a href="#">
+                        Check out Coursera for Teams
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.5 2.5H15.5V6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M8.5 9.5L15.5 2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12.5 9.5V13.5C12.5 14.0523 12.0523 14.5 11.5 14.5H2.5C1.94772 14.5 1.5 14.0523 1.5 13.5V4.5C1.5 3.94772 1.94772 3.5 2.5 3.5H6.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </a>
+                </p>
+            </div>
+            <div class="c-b-promo__logo-grid">
+                <div class="c-b-promo__logo-item"><img src="images/promo1-removebg.png" alt="L'Oréal"></div>
+                <div class="c-b-promo__logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/8/85/Procter_%26_Gamble_logo.svg" alt="P&G"></div>
+                <div class="c-b-promo__logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Tata_logo.svg" alt="TATA"></div>
+                <div class="c-b-promo__logo-item"><img src="images/promo4-removebg.png" alt="Danone"></div>
+                <div class="c-b-promo__logo-item"><img src="images/promo5-removebg.png" alt="Emirates NBD"></div>
+                <div class="c-b-promo__logo-item"><img src="images/promo6-removebg.png" alt="Reliance Industries Limited"></div>
+                <div class="c-b-promo__logo-item"><img src="images/promo6-removebg.png" alt="Capgemini"></div>
+                <div class="c-b-promo__logo-item"><img src="images/promo8-removebg.png" alt="Petrobras"></div>
+                <div class="c-b-promo__logo-item"><img src="images/promo9-removebg.png" alt="GE"></div>
+            </div>
+        </div>
+    </section>
+<!-- END: Coursera Promo Section -->
+
+    <!-- Call to Action Section -->
+     <!-- START: Coursera Personal Goals Section -->
+        <section class="coursera-personal-goals">
+            <div class="c-p-goals__container">
+                <div class="c-p-goals__image-wrapper">
+                    <div class="c-p-goals__deco-circle"></div>
+                    <img src="images/callofaction.png" alt="A smiling person in a professional office setting.">
+                </div>
+                <div class="c-p-goals__text-content">
+                    <h1>Take the next step toward your personal and professional goals with Coursera.</h1>
+                    <p>Join now to receive personalized recommendations from the full Coursera catalog.</p>
+                    <a href="#" class="c-p-goals__btn">Join for Free</a>
+                </div>
+            </div>
+            <div class="c-p-goals__footer">
+                <p>
+                    <sup>1</sup> Median salary and job opening data are sourced from Lightcast™ Job Postings Report.<br>
+                    Content Creator, Machine Learning Engineer and Salesforce Development Representative (01/01/2024 - 31/12/2024)<br>
+                    All other job roles (01/06/2024 - 01/06/2025)
+                </p>
+            </div>
+        </section>
+    <!-- END: Coursera Personal Goals Section -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Coursera</h3>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">What We Offer</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#">Coursera Plus</a></li>
+                    <li><a href="#">Professional Certificates</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="#">Learners</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Beta Testers</a></li>
+                    <li><a href="#">Translators</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Tech Blog</a></li>
+                    <li><a href="#">Teaching Center</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>More</h3>
+                <ul>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">Investors</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                
+                <div class="app-downloads">
+                    <a href="#"><img src="images/appstore1.png"  width="100" height="100" alt="Download on App Store"></a>
+                    <a href="#"><img src="images/playstore.png" width="100" height="100" alt="Get it on Google Play"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Coursera Inc. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><span class="social-icon"><img src="https://www.citypng.com/public/uploads/preview/round-black-facebook-fb-logo-icon-sign-701751695134781upkxjlqwck.png"  alt="facebook"> </span></a>
+                <a href="#" aria-label="LinkedIn"><span class="social-icon"><img src="images/linkedin1.png" alt="LinkedIn"></span></a>
+                <a href="#" aria-label="Twitter"><span class="social-icon"><img src="images/twitter.png" alt="twitter"> </span></a>
+                <a href="#" aria-label="Instagram"><span class="social-icon"><img src="images/insta.png" alt="Instagram"></span></a>
+                <a href="#" aria-label="YouTube"><span class="social-icon"><img src="images/ticktok.png" alt="Ticktok"></span></a>
+            </div>
+        </div>
+        <!-- <p class="footnote">¹ Median salary and job opening data are sourced from Lightcast™ Job Postings Report. Content Creator, Machine Learning Engineer and Salesforce Development Representative (1/1/2024 - 12/31/2024) All other job roles (6/1/2024 - 6/1/2025)</p> -->
+    </footer>
+
+    <!--CHATBOT START-->
+    <button id="chat-toggle-button" aria-label="Open chat">💬</button>
+
+    <div id="chat-container" class="hidden">
+        <div id="chat-header">
+            <h3>Coursera Helper</h3>
+            <button id="chat-close-button" aria-label="Close chat">×</button>
+        </div>
+        <div id="chat-messages">
+            <div class="bot-message">
+                <p>Hello! How can I help you today? You can ask about 'pricing', 'courses', or 'financial aid'.</p>
+            </div>
+        </div>
+        <div id="chat-input-container">
+            <input type="text" id="chat-input" placeholder="Type your message...">
+            <button id="chat-send-button">Send</button>
+        </div>
+    </div>
+    <!--CHATBOT END-->
+
+    <!--  NOTEPAD START -->
+    <button id="notepad-toggle-button" aria-label="Open notes">📝</button>
+
+    <div id="notepad-container" class="hidden">
+        <div id="notepad-header">
+            <h3>My Notes</h3>
+            <button id="notepad-close-button" aria-label="Close notes">×</button>
+        </div>
+        <div id="notepad-content">
+            <textarea id="notepad-textarea" placeholder="Start typing your notes here..."></textarea>
+        </div>
+        <div id="notepad-footer">
+            <p id="notepad-status">Notes are saved automatically.</p>
+        </div>
+    </div>
+    <!-- NOTEPAD END -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const toggle = document.querySelector('.mobile-menu-toggle');
+        const menu = document.querySelector('.mobile-menu');
+    
+        toggle.addEventListener('click', () => {
+          menu.classList.toggle('active');
+          toggle.classList.toggle('open');
+        });
+      });
+    </script>
+    
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

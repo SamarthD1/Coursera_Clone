@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title will be set by JavaScript -->
+    <title>Enroll | Coursera Clone</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+    <!-- Consistent Header -->
+    <nav class="top-nav">
+        <div class="audience-nav">
+            <a href="index.html">For Individuals</a>
+            <a href="Business.html">For Businesses</a>
+        </div>
+    </nav>
+    <header>
+        <div class="topsec-nav">
+            <div class="logo">
+                <a href="course.html"><img src="images/coursera_logo.png" alt="Coursera"></a>
+            </div>
+            <div class="auth-nav">
+                <a href="login.html" class="login">Log In</a>
+                <a href="signup1.html" class="signup">Join for Free</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content for the Enrollment Form -->
+    <main class="enroll-page-container">
+        
+        <div class="enroll-form-wrapper">
+            <!-- Title will be filled by JS -->
+            <h1 id="enroll-title">Enroll in a Course</h1>
+
+            <!-- The novalidate attribute prevents default browser validation -->
+            <form id="enrollment-form" novalidate>
+                <fieldset>
+                    <legend>Your Information</legend>
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full_name" required>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Payment Details</legend>
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" name="card_number" placeholder="XXXX XXXX XXXX XXXX" required>
+                        <span class="error-message" id="card-error"></span>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry-date">Expiry Date</label>
+                            <input type="text" id="expiry-date" name="expiry_date" placeholder="MM / YY" required>
+                            <span class="error-message" id="expiry-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                            <span class="error-message" id="cvv-error"></span>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <button type="submit" class="submit-enrollment">Complete Enrollment</button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Consistent Footer -->
+    <footer>
+        <div class="footer-bottom">
+            <p>© 2025 Coursera Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts: data.js is for course info, enroll.js for validation logic -->
+    <script src="js/data.js"></script>
+    <script src="js/enroll.js"></script>
+</body>
+</html>

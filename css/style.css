@@ -1,0 +1,3493 @@
+/* [ Your entire existing CSS file content... ] */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    color: #1F1F1F;
+    line-height: 1.5;
+    background-color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: #0056D2;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    transition: all 0.2s ease;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header Styles */
+header {
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+
+.top-nav-right {
+    margin-left: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px 15px 200px;
+ 
+    margin: 0 auto;
+}
+
+.topsec-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 70px;
+}
+
+/* Audience Navigation */
+.audience-nav {
+    display: flex;
+    gap: 1rem;
+    margin-left: 100px;
+}
+
+.audience-nav a {
+    color: white;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.audience-nav a:hover {
+    color: #0056D2;
+}
+
+.audience-nav a.active {
+    color: #0056D2;
+    font-weight: bold;
+    border-bottom: 2px solid #0056D2;
+}
+
+/* Logo */
+.logo {
+    margin-right: 1.5rem;
+    margin-top: 10px;
+}
+
+.logo img {
+    height: 40px;
+    transition: opacity 0.2s ease;
+}
+
+.logo img:hover {
+    opacity: 0.8;
+}
+
+/* Main Navigation */
+.main-nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Explore Button and Dropdown */
+.explore-button {
+    color: #373A3C;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #2A73CC;
+    border-radius: 4px;
+    position: relative;
+    margin-right: 620px;
+}
+
+.explore-button::after {
+    content: "▼";
+    font-size: 0.7em;
+    margin-left: 5px;
+    transition: transform 0.2s ease;
+}
+
+.explore-button:hover {
+    color: #0056D2;
+    background-color: #EBF3FF;
+}
+
+.explore-button:hover::after {
+    transform: rotate(180deg);
+}
+
+/* Explore Dropdown Menu */
+.explore-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 800px;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    padding: 10px;
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    z-index: 200;
+}
+
+.explore-button:hover + .explore-dropdown,
+.explore-dropdown:hover {
+    display: grid;
+}
+
+.dropdown-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dropdown-section h3 {
+    color: #0056D2;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.dropdown-section a {
+    color: #373A3C;
+    font-size: 0.875rem;
+    padding: 0.25rem 0;
+    transition: color 0.2s ease;
+}
+
+.dropdown-section a:hover {
+    color: #0056D2;
+    text-decoration: underline;
+}
+
+.view-all {
+    color: #0056D2;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* Main Nav Links */
+.main-nav a {
+    color: #373A3C;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #0056D2;
+    background-color: #EBF3FF;
+}
+
+/* Auth Navigation */
+.auth-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login {
+    color: #373A3C;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.login:hover {
+    color: #0056D2;
+    background-color: #EBF3FF;
+}
+
+.signup {
+    background-color: #0056D2;
+    color: #FFFFFF;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.signup:hover {
+    background-color: #00419E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Banner Styles */
+.banner {
+    background-color: #EBF3FF;
+    padding: 0.5rem 1.5rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner p {
+    font-size: 0.875rem;
+}
+
+.banner a {
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.banner a:hover {
+    text-decoration: underline;
+}
+
+.close-banner {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #6B7780;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.close-banner:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #373A3C;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    padding: 3rem 1.5rem;
+    background-color: #FFFFFF;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #1F1F1F;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #373A3C;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: 1px solid #D8D8D8;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.search-container input:focus {
+    outline: none;
+    border-color: #0056D2;
+    box-shadow: 0 0 0 2px rgba(0, 86, 210, 0.2);
+}
+
+.search-container button {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6B7780;
+    background-color: #0056D2;
+    color: white;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.search-container button:hover {
+    background-color: #00419E;
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* Trending Topics */
+.trending {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.trending span {
+    color: #6B7780;
+    font-size: 0.875rem;
+}
+
+.trending a {
+    background-color: #F5F5F5;
+    color: #373A3C;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.trending a:hover {
+    background-color: #D8D8D8;
+    color: #1F1F1F;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Partners Section */
+.partners {
+    /* padding: 2rem 1.5rem; */
+    background-color: #fdfdfd;
+    /* text-align: center; */
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.partners h2 {
+    font-size: 1rem;
+    color: #373A3C;
+    margin-bottom: 1rem;
+}
+
+.partner-logos {
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.partner-logos a {
+    display: flex;
+    align-items: center;
+}
+
+.partner-logos img {
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.partner-logos img:hover {
+    transform: scale(1.05);
+}
+
+/* Career Roles Section */
+.career-div{
+    background-color: #F5F7FA;
+    border-radius: 15px;
+    margin: 40px;
+
+}
+.career-div-nav{
+    padding-top: 20px;
+    align-items: center;
+    padding-left: 250px;
+    display: flex;
+    gap: 10px;
+    transition: all 0.2s ease;
+}
+
+/* .career-div-level{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #70819a;
+    border-radius: 20px;
+    text-align: left;
+    padding-left: 10px;
+    background-color: white;
+} */
+
+/*  */
+.career-div-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .career-div-level {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #70819a;
+    border-radius: 20px;
+    text-align: left;
+    padding-left: 10px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .career-div-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100px;
+    border: 1px solid #70819a;
+    border-radius: 6px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 4px;
+    z-index: 1;
+  }
+  
+  .career-div-dropdown-content a {
+    color: #333;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .career-div-dropdown-content a:last-child {
+    border-bottom: none;
+  }
+  
+  .career-div-dropdown-content a:hover {
+    background-color: #0056D2;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  
+/*  */
+
+
+.career-div-popular{
+    width: 80px;
+    height: 30px;
+    border: 1px solid #70819a;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #70819a;
+    color: white;
+
+}
+
+.career-div-popular:hover {
+    color: #0056D2;        
+    border-color: #0056D2;
+}
+
+.career-div-navbuttons{
+    
+    height: 30px;
+    border: 1px solid #70819a;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+
+}
+
+
+
+.career-div-navbuttons:hover {
+    color: #0056D2;        
+    border-color: #0056D2;
+  }
+
+.career-roles {
+    padding: 3rem 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+}
+
+.career-roles h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.explore-all{
+    margin-top: 20px;
+    font-size: 15px;
+    margin-left: 0px;
+    width: 150px;
+    height: 50px;
+    background-color: #0056D2;
+    border-radius: 6px;
+    transition: transform 0.2s ease;
+    color: white;
+}
+
+.career-roles > p {
+    color: #373A3C;
+    margin-bottom: 2rem;
+}
+
+.role-cards {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-left: 100px;
+}
+
+.role-card {
+    flex: 1;
+    min-width: 100px;
+    background-color: white;
+    border: 1px solid #D8D8D8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+.role-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    border-color: #0056D2;
+}
+
+.role-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #0056D2;
+}
+
+.role-card > p {
+    color: #373A3C;
+    margin-bottom: 1.5rem;
+}
+
+.role-details {
+    border-top: 1px solid #D8D8D8;
+    padding-top: 1rem;
+}
+
+.role-details p {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.role-details-icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    
+    
+}
+
+.role-details-icons p{
+    padding-top: 4px;
+}
+.role-details-icons img{
+    width: 20px;
+    height: 20px;
+    /* margin-top: 10px; */
+    border: 1px solid silver;
+    border-radius: 4px;
+
+}
+
+
+/* Certificates Section */
+
+
+
+.certificates {
+    padding: 60px;
+    background-color: white;
+}
+
+.certificates h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.certificates img{
+    height: 180px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.certificates h3 {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+
+.crole-card {
+    flex: 1;
+    min-width: 100px;
+    background-color: white;
+    border: 1px solid #D8D8D8;
+    border-radius: 8px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.clogo img {
+    width: 25px;
+    height: 25px;
+    border: 1px solid silver;
+    border-radius: 4px;
+}
+
+.clogo {
+    display: flex;
+    margin-top: 10px;
+    
+}
+
+.clogo p{
+    padding-left: 10px;
+    color: rgb(113, 109, 109);
+}
+
+
+.certificates > p {
+    color: #373A3C;
+    margin-bottom: 10px;
+}
+
+.certificate-icon{
+    margin-top: 30px;
+}
+
+.certificate-icon img{
+    width: 20px;
+    height: 15px;
+}
+
+.certificate-icon p{
+    color: #6B7780;
+
+}
+/*  top-right img inside img*/
+.image-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    border-radius: 8px;
+  }
+  
+  .top-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+  }
+  
+  .top-buttons .btn {
+    padding: 2px 2px;
+    font-size: 0.875rem;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .top-buttons .btn:hover {
+    background-color: #00419E;
+  }
+  /* certificate show more */
+
+  .certificate-showmore-btn-row {
+    display: flex;
+    justify-content: left; 
+    flex-wrap: nowrap;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .certificate-showmore-btn {
+    padding: 10px 20px;
+    height: 60px;
+    width: 150px;
+    background-color: #0056D2;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .certificate-showmore-btn.view-all{
+    background-color: white;
+    color: #0056D2;
+    margin-top: 0px;
+    
+
+  }
+  
+  .certificate-showmore-btn:hover {
+    background-color: #00419E;
+  }
+  
+  /* .certificate-showmore-btn.view-all {
+    background-color: #2A73CC;
+  } */
+  
+  /* .certificate-showmore-btn.view-all:hover {
+    background-color: #1d57a8;
+  } */
+  
+
+.certificate-cards {
+    margin-top: 20px;
+    padding-top: 10px;
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #D8D8D8 transparent;
+}
+
+.crole-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    border-color: #0056D2;
+}
+
+.certificate-cards::-webkit-scrollbar {
+    height: 6px;
+}
+
+.certificate-cards::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.certificate-cards::-webkit-scrollbar-thumb {
+    background-color: #D8D8D8;
+    border-radius: 20px;
+}
+
+/* GenAI Section */
+.genai {
+    padding: 10px 10px;
+    background-image: url('/images/genaibg.png'); /* your image path */
+    background-size: cover;       /* scales image to cover entire box */
+    background-position: center;  /* centers the image */
+    background-repeat: no-repeat; /* prevents tiling */
+    border-radius: 8px;
+    margin: 50px;
+}
+
+.genai-div-nav{
+    align-items: center;
+    padding-left: 250px;
+    display: flex;
+    gap: 10px;
+}
+
+.genai-div-new{
+    width: 60px;
+    height: 30px;
+    border: 1px solid #70819a;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #70819a;
+    color: white;
+
+}
+
+.genai-div-new:hover {
+    color: #0056D2;        
+    border-color: #0056D2;
+}
+
+.genai h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.genai > p {
+    color: #373A3C;
+    margin-bottom: 2rem;
+}
+
+.genai-showmore-btn {
+    padding: 10px 20px;
+    height: 40px;
+    width: 180px;
+    background-color: #0056D2;
+    color: white;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 20px;
+  }
+
+.genai-outercards{
+    padding: 3rem 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+}
+
+.grole-card {
+    flex: 1;
+    width: 600px;
+    min-width: 100px;
+    background-color: white;
+    border: 1px solid #D8D8D8;
+    border-radius: 8px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+
+.genai-cards {
+    display: flex;
+    margin-left: 60px;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #D8D8D8 transparent;
+}
+
+.grole-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    border-color: #0056D2;
+}
+
+.genai-cards::-webkit-scrollbar {
+    height: 6px;
+}
+
+.genai-cards::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.genai-cards::-webkit-scrollbar-thumb {
+    background-color: #D8D8D8;
+    border-radius: 20px;
+}
+
+/* Degrees Section */
+.degrees {
+    padding: 3rem 1.5rem;
+    background-color: white;
+}
+
+.degrees h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.degrees > p {
+    color: #373A3C;
+    margin-bottom: 10px;
+}
+
+.degree-cards {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #D8D8D8 transparent;
+}
+
+.degree-cards::-webkit-scrollbar {
+    height: 6px;
+}
+
+.degree-cards::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.degree-cards::-webkit-scrollbar-thumb {
+    background-color: #D8D8D8;
+    border-radius: 20px;
+}
+
+.footnote {
+    font-size: 0.875rem;
+    color: #6B7780;
+    margin-top: 1.5rem;
+}
+
+/* Explore Categories Section */
+.explore-categories {
+    padding: 3rem 1.5rem;
+}
+
+/* Explore*/
+
+/* --- Explore Section Container --- */
+/* .explore-section {
+    max-width: 1300px;
+    margin-left: 50px;
+    padding: 0 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+} */
+
+.explore-section {
+    max-width: 1300px;
+    margin-left: auto; 
+    margin-right: auto; 
+    padding: 0 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.explore-section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2d2d2d;
+    margin-bottom: 2.5rem;
+}
+
+/* --- Category Grid Layout --- */
+/* .category-grid {
+    display: grid;
+    gap: 20px;
+    Mobile-first: 1 column by default
+    grid-template-columns: 1fr;
+} */
+
+.category-grid {
+    margin: 0 auto;
+}
+
+/* --- Category Card Styles --- */
+.category-card {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    gap: 20px;
+    padding-left: 0px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden; 
+    text-decoration: none; 
+    color: inherit; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-card .card-image{
+    align-items: left;
+}
+.card-image {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    margin-left: 0px;
+    text-align: left;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0; 
+    border-radius: 8px;
+    background-size: cover;
+    background-position: left;
+}
+
+  
+
+.card-text {
+    padding: 15px;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #2d2d2d;
+    margin: 0 0 4px 0;
+}
+
+.card-subtitle {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+/* --- Responsive Breakpoints for the Grid --- */
+
+/* Tablets and small desktops (2 columns) */
+@media (min-width: 600px) {
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Medium desktops (3 columns) */
+@media (min-width: 900px) {
+    .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large desktops (4 columns - like the screenshot) */
+@media (min-width: 1200px) {
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* . */
+
+.explore-categories h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.category-card {
+    border: 1px solid #D8D8D8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    color: #1F1F1F;
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-color: #0056D2;
+    transform: translateY(-3px);
+}
+
+.category-card h3 {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+    color: #0056D2;
+}
+
+.category-card p {
+    color: #6B7780;
+    font-size: 0.875rem;
+}
+
+/* outcomes section */
+/* --- Safely Scoped Box-Sizing --- */
+.outcomes-section *,
+.outcomes-section *::before,
+.outcomes-section *::after {
+    box-sizing: border-box;
+}
+
+/* --- Main Section Styling --- */
+.outcomes-section {
+    width: 100%;
+    padding: 4rem 2rem; /* Vertical and horizontal padding */
+    background-color: #f0f5ff; /* Light blue background like the original */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #2d2d2d;
+}
+
+.outcomes-section .outcomes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    
+}
+
+/* --- Image Collage (Left Side) --- */
+.outcomes-section .image-collage {
+    flex: 1 1 50%; 
+    position: relative;
+    height: 300px; 
+    min-width: 300px;
+}
+
+.outcomes-section .image-collage img {
+    position: absolute;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.outcomes-section .collage-img-1 {
+    width: 200px;
+    height: 200px;
+    top: -5%;
+    bottom: 25%;
+    left: 2%;
+    z-index: 2;
+}
+
+.outcomes-section .collage-img-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 30%;
+    right: 35%;
+    z-index: 3;
+}
+
+.outcomes-section .collage-img-3 {
+    width: 150px;
+    height: 150px;
+    bottom: -15%;
+    left: 11%;
+    z-index: 1;
+}
+
+/* --- Decorative SVG Pattern --- */
+.outcomes-section .decorative-pattern {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    bottom: 25%;
+    left: 20%;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+
+/* --- Text Content (Right Side) --- */
+.outcomes-section .text-content {
+    flex: 1 1 50%;
+    padding-left: 2rem;
+}
+
+.outcomes-section .text-content h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.outcomes-section .text-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+ .text-content a {
+    color: #0056d2;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.outcomes-section .text-content a:hover {
+    text-decoration: none;
+}
+
+.outcomes-section .btn-join {
+    display: inline-block;
+    background-color: #0056d2;
+    color: #0056d2;
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    margin-top: 1rem;
+}
+
+.outcomes-section .btn-join:hover {
+    background-color: #0041a1;
+}
+
+
+/* --- Responsive Styles --- */
+@media (max-width: 992px) {
+    .outcomes-section .outcomes-container {
+        flex-direction: column; /* Stack columns vertically */
+        text-align: center;
+    }
+    
+    .outcomes-section .text-content {
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+
+    .outcomes-section .image-collage {
+        height: 450px; /* Adjust height for smaller screens */
+        width: 100%;
+        max-width: 500px; /* Prevent it from becoming too wide */
+    }
+
+    .outcomes-section .text-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .outcomes-section {
+        padding: 3rem 1rem;
+    }
+
+    .outcomes-section .image-collage {
+        height: 350px; /* Further reduce height for mobile */
+    }
+
+     .outcomes-section .text-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .outcomes-section .text-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Business Section */
+/* . */
+.coursera-business-promo {
+    background-color: #f5f7fa;
+    font-family: 'Inter', sans-serif;
+    color: #0d111b;
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+
+.coursera-business-promo .c-b-promo__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.coursera-business-promo .c-b-promo__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.coursera-business-promo h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: #0d111b; /* Ensure text color is set explicitly */
+}
+
+.coursera-business-promo p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #5e6d7d;
+}
+
+.coursera-business-promo .c-b-promo__btn {
+    background-color: #0056d2;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-block;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.coursera-business-promo .c-b-promo__btn:hover {
+    background-color: #0045a8;
+}
+
+.coursera-business-promo .c-b-promo__small-link {
+    font-size: 1rem;
+    color: #5e6d7d;
+}
+
+.coursera-business-promo .c-b-promo__small-link a {
+    color: #0056d2;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.coursera-business-promo .c-b-promo__small-link svg {
+    width: 14px;
+    height: 14px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.coursera-business-promo .c-b-promo__logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #f5f7fa; /* Darker border for contrast */
+    border-left: 1px solid #f5f7fa;
+}
+
+.coursera-business-promo .c-b-promo__logo-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 100px;
+    box-sizing: border-box;
+    border-right: 1px solid #dee1e6;
+    border-bottom: 1px solid #dee1e6;
+    background-color: #f5f7fa;
+}
+
+.coursera-business-promo .c-b-promo__logo-item img {
+    max-width: 400px;
+    max-height: 45px;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .coursera-business-promo .c-b-promo__container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .coursera-business-promo .c-b-promo__text-content {
+        align-items: center;
+    }
+
+    .coursera-business-promo h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .coursera-business-promo {
+        padding: 2rem 1.5rem;
+    }
+    
+    .coursera-business-promo h1 {
+        font-size: 2rem;
+    }
+    
+    .coursera-business-promo p {
+        font-size: 1rem;
+    }
+
+    .coursera-business-promo .c-b-promo__logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .coursera-business-promo .c-b-promo__logo-item:nth-child(2n) {
+        border-right: none;
+    }
+    
+    .coursera-business-promo .c-b-promo__logo-item:nth-child(odd) {
+         border-right: 1px solid #a4c4d4;
+    }
+
+    .coursera-business-promo .c-b-promo__logo-item:last-child:nth-child(odd) {
+        border-right: none;
+    }
+}
+
+/* .. */
+/* .business {
+    padding: 3rem 1.5rem;
+    background-color: #EBF3FF;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.business h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.business p {
+    color: #373A3C;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.business-cta {
+    display: inline-block;
+    background-color: #0056D2;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.business-cta:hover {
+    background-color: #00419E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
+
+/* Call to Action Section */
+.coursera-personal-goals {
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    padding: 4rem 2rem;
+    overflow: hidden; /* Prevents decorative circle from creating horizontal scroll */
+    box-sizing: border-box;
+}
+
+.coursera-personal-goals .c-p-goals__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+/* --- Image Column --- */
+.coursera-personal-goals .c-p-goals__image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coursera-personal-goals .c-p-goals__image-wrapper img {
+    max-width: 90%;
+    width: 450px;
+    height: auto;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.coursera-personal-goals .c-p-goals__deco-circle {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 3px solid #f09654;
+    border-radius: 50%;
+    top: 30%;
+    left: 30%;
+    transform: translate(-60%, -50%); /* Positions the circle behind the image */
+    z-index: 1;
+}
+
+/* --- Text Content Column --- */
+.coursera-personal-goals .c-p-goals__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.coursera-personal-goals h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #212121;
+    margin: 0;
+}
+
+.coursera-personal-goals p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #5e6d7d;
+    margin: 0;
+}
+
+.coursera-personal-goals .c-p-goals__btn {
+    background-color: #0056d2;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    display: inline-block;
+    align-self: flex-start;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+.coursera-personal-goals .c-p-goals__btn:hover {
+    background-color: #0045a8;
+}
+
+/* --- Footer Section --- */
+.coursera-personal-goals .c-p-goals__footer {
+    max-width: 1100px;
+    margin-top: 100px;
+    margin-left: 20px;
+    padding-top: 1.5rem;
+    text-align: left;
+}
+
+.coursera-personal-goals .c-p-goals__footer p {
+    font-size: 0.75rem;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .coursera-personal-goals .c-p-goals__container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .coursera-personal-goals .c-p-goals__text-content {
+        align-items: center;
+        order: -1; /* Moves text content above the image on mobile */
+    }
+    .coursera-personal-goals .c-p-goals__btn {
+        align-self: center;
+    }
+    .coursera-personal-goals h1 {
+        font-size: 2.25rem;
+    }
+    .coursera-personal-goals .c-p-goals__image-wrapper img {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .coursera-personal-goals {
+        padding: 3rem 1.5rem;
+    }
+    .coursera-personal-goals h1 {
+        font-size: 1.75rem;
+    }
+    .coursera-personal-goals p {
+        font-size: 1rem;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #F5F5F5;
+    padding: 3rem 1.5rem 1.5rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+.footer-column h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-column a {
+    color: #373A3C;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #0056D2;
+    text-decoration: underline;
+}
+
+.app-downloads {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.app-downloads img {
+    height: 40px;
+    transition: opacity 0.2s ease;
+}
+
+.app-downloads img:hover {
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #D8D8D8;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    color: #6B7780;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #6B7780;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    /* width: 32px;
+    height: 32px;
+    border-radius: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #D8D8D8; */
+}
+
+.social-icon img{
+    width: 32px;
+    height: 32px;
+
+}
+
+/* .social-links a:hover {
+    color: #FFFFFF;
+    background-color: #0056D2;
+} */
+
+footer .footnote {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    color: #6B7780;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+    }
+    
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .role-cards {
+        flex-direction: column;
+    }
+    
+    .explore-dropdown {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .top-nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .audience-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .logo {
+        order: 1;
+    }
+    
+    .main-nav {
+        order: 2;
+    }
+    
+    .auth-nav {
+        order: 4;
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .explore-dropdown {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-nav {
+        padding: 1rem;
+    }
+    
+    .hero {
+        padding: 2rem 1rem;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .explore-dropdown {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+    }
+}
+
+
+/* Additional styles for JavaScript functionality */
+
+/* Active state for Explore button */
+.explore-button.active {
+    color: #0056D2;
+    background-color: #EBF3FF;
+}
+
+.explore-button.active::after {
+    transform: rotate(180deg);
+}
+
+/* Active state for Explore dropdown */
+.explore-dropdown.active {
+    display: grid;
+}
+
+/* Mobile menu styles */
+.mobile-menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .top-nav > div {
+        width: 100%;
+    }
+    
+    .audience-nav, .main-nav, .auth-nav {
+        display: none;
+    }
+    
+    .top-nav.mobile-active .audience-nav,
+    .top-nav.mobile-active .main-nav,
+    .top-nav.mobile-active .auth-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .top-nav.mobile-active .main-nav a,
+    .top-nav.mobile-active .audience-nav a,
+    .top-nav.mobile-active .auth-nav a {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .explore-dropdown {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        padding: 1rem;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Active states for navigation links */
+.main-nav a.active {
+    color: #0056D2;
+    background-color: #EBF3FF;
+}
+
+.audience-nav a.active {
+    color: #0056D2;
+    font-weight: bold;
+    border-bottom: 2px solid #0056D2;
+}
+
+/* Focus states for accessibility */
+a:focus, button:focus, input:focus {
+    outline: 2px solid #0056D2;
+    outline-offset: 2px;
+}
+
+/*  hover effects for buttons */
+.signup:hover, .cta-button:hover, .business-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*  hover effects for cards */
+.role-card:hover, .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-color: #0056D2;
+}
+
+/*  hover effects for links */
+.footer-column a:hover, .banner a:hover {
+    text-decoration: underline;
+}
+
+/* hover effects for social links */
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+/*  hover effects for partner logos */
+.partner-logos img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Coursera Testimonials Section  */
+.coursera-testimonials {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.coursera-testimonials__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.coursera-testimonials__title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333333;
+    text-align: center;
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+.coursera-testimonials__subtitle {
+    font-size: 1.125rem;
+    color: #666666;
+    text-align: center;
+    margin: 0 0 60px 0;
+    font-weight: 400;
+}
+
+.coursera-testimonials__cards {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.coursera-testimonials__card {
+    flex: 1;
+    max-width: 350px;
+    min-width: 280px;
+    text-align: center;
+    background: transparent;
+}
+
+.coursera-testimonials__profile {
+    margin-bottom: 24px;
+}
+
+.coursera-testimonials__avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px auto;
+    display: block;
+    background-color: #f0f0f0;
+}
+
+.coursera-testimonials__name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333333;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.coursera-testimonials__location {
+    font-size: 1rem;
+    color: #666666;
+    margin: 0 0 16px 0;
+    font-weight: 400;
+}
+
+.coursera-testimonials__separator {
+    width: 60px;
+    height: 3px;
+    background-color: #4285f4;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.coursera-testimonials__quote {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444444;
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    text-align: left;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .coursera-testimonials {
+        padding: 40px 16px;
+    }
+    
+    .coursera-testimonials__title {
+        font-size: 2rem;
+    }
+    
+    .coursera-testimonials__subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+    }
+    
+    .coursera-testimonials__cards {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .coursera-testimonials__card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .coursera-testimonials__title {
+        font-size: 1.75rem;
+    }
+    
+    .coursera-testimonials__avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .coursera-testimonials__name {
+        font-size: 1.25rem;
+    }
+}
+
+/* --- DYNAMIC CATALOG STYLES (NEW) --- */
+.dynamic-catalog {
+    padding: 60px 40px;
+    background-color: #FFFFFF;
+    max-width: 1400px;
+    margin: 40px auto;
+}
+
+.dynamic-catalog h2 {
+    font-family: 'Winky Rough', 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.dynamic-catalog > p {
+    font-size: 20px;
+    color: #373A3C;
+    margin-bottom: 2rem;
+}
+
+.catalog-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.catalog-filters button {
+    height: 40px;
+    border: 1px solid #70819a;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+    padding: 0 20px;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.catalog-filters button:hover {
+    color: #0056D2;
+    border-color: #0056D2;
+}
+
+.catalog-filters button.active {
+    background-color: #0056D2;
+    color: white;
+    border-color: #0056D2;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.catalog-grid .crole-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-grid .view-details-btn {
+    margin-top: auto; /* Pushes the button to the bottom */
+    padding: 12px 20px;
+    background-color: #0056D2;
+    color: white;
+    border: 1px solid #0056D2;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.catalog-grid .view-details-btn:hover {
+    background-color: #00419E;
+    color: white;
+    text-decoration: none;
+}
+
+/* --- COURSE DETAIL PAGE STYLES (NEW) --- */
+.course-detail-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.course-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 for main content, 1/3 for sidebar */
+    gap: 3rem;
+}
+
+.course-main-content h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.course-main-content .course-tagline {
+    font-size: 1.25rem;
+    color: #6B7780;
+    margin-bottom: 2rem;
+}
+
+.course-main-content .course-hero-image {
+    width: 100%;
+    max-height: 400px;      /* MODIFIED: Sets a maximum height for the image */
+    object-fit: cover;      /* MODIFIED: Ensures the image covers the area without distortion */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.course-main-content h2 {
+    font-size: 1.75rem;
+    border-bottom: 2px solid #EBF3FF;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.course-main-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.course-main-content ul li {
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.course-sidebar {
+    background-color: #F5F7FA;
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: sticky;
+    top: 100px; /* Adjust based on header height */
+}
+
+.course-sidebar h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.course-sidebar p {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+}
+
+.course-sidebar strong {
+    color: #1F1F1F;
+}
+
+.course-sidebar .price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0056D2;
+}
+
+.course-sidebar .enroll-button {
+    display: block;
+    width: 100%;
+    background-color: #0056D2;
+    color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+}
+
+.course-sidebar .enroll-button:hover {
+    background-color: #00419E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+/* Responsive adjustments for course detail page */
+@media (max-width: 992px) {
+    .course-layout {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+}
+
+/* --- TABBED LAYOUT STYLES FOR COURSE DETAIL (NEW) --- */
+.course-tabs {
+    margin-top: 2rem;
+}
+
+.course-tabs-nav {
+    display: flex;
+    border-bottom: 2px solid #D8D8D8;
+    margin-bottom: -2px; /* Overlap with content border */
+}
+
+.course-tabs-nav .tab-link {
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6B7780;
+    border: 2px solid transparent;
+    border-bottom: none;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+}
+
+.course-tabs-nav .tab-link.active-tab {
+    color: #0056D2;
+    border-color: #D8D8D8;
+    border-bottom-color: white; /* Hides border part above content */
+    border-radius: 6px 6px 0 0;
+}
+
+.tab-content {
+    display: none; /* Hide all tabs by default */
+    padding: 2rem;
+    border: 2px solid #D8D8D8;
+    border-radius: 0 8px 8px 8px;
+}
+
+.tab-content.active-tab-content {
+    display: block; /* Show only the active tab */
+}
+
+.review-card {
+    border-bottom: 1px solid #EBF3FF;
+    padding: 1.5rem 0;
+}
+
+.review-card:last-child {
+    border-bottom: none;
+}
+
+.review-card p {
+    margin: 0;
+}
+
+.review-card strong {
+    font-size: 1.1rem;
+}
+
+.review-stars {
+    color: #FFC107; /* A gold/yellow color for stars */
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- INSTRUCTOR DETAIL PAGE STYLES (NEW) --- */
+.instructor-page-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+.instructor-profile {
+    background-color: #F5F7FA;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.instructor-profile h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.instructor-profile .instructor-bio {
+    font-size: 1.1rem;
+    color: #373A3C;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.instructor-courses h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #D8D8D8;
+    padding-bottom: 0.5rem;
+}
+
+.instructor-course-list {
+    list-style: none;
+    padding: 0;
+}
+
+.instructor-course-list li {
+    margin-bottom: 1rem;
+}
+
+.instructor-course-list a {
+    display: block;
+    padding: 1rem;
+    border: 1px solid #D8D8D8;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+}
+
+.instructor-course-list a:hover {
+    border-color: #0056D2;
+    color: #0056D2;
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-decoration: none;
+}
+
+/* --- INSTRUCTOR AVATAR STYLES (NEW) --- */
+.instructor-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;      /* Makes the image circular */
+    object-fit: cover;       /* Prevents the image from stretching */
+    margin-bottom: 1.5rem;   /* Adds space below the image */
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --- MODIFIED: Styles for moved Search and Trending sections --- */
+
+.dynamic-catalog .search-container {
+    max-width: 700px;
+    margin: 0 auto 1.5rem auto; /* Center the search bar and add space below */
+}
+
+.dynamic-catalog .trending {
+    justify-content: center; /* Center the trending links */
+    margin-bottom: 2.5rem;   /* Add space between trending and filters */
+}
+
+.dynamic-catalog .trending a {
+    cursor: pointer; /* Makes it clear the links are clickable */
+}
+
+
+/* --- ENROLLMENT PAGE STYLES (NEW) --- */
+.enroll-page-container {
+    padding: 3rem 1.5rem;
+    background-color: #f5f7fa; /* Light background for the whole page */
+    min-height: 80vh;
+}
+
+.enroll-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.enroll-form-wrapper h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#enrollment-form fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+#enrollment-form legend {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #D8D8D8;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #D8D8D8;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.form-group input:focus {
+    border-color: #0056D2;
+    box-shadow: 0 0 0 2px rgba(0, 86, 210, 0.2);
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.error-message {
+    color: #dc3545; /* A standard Bootstrap danger red */
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+    min-height: 1rem; /* Prevents layout shift when errors appear */
+}
+
+.submit-enrollment {
+    width: 100%;
+    background-color: #0056D2;
+    color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+}
+
+.submit-enrollment:hover {
+    background-color: #00419E;
+}
+
+.enroll-success-message {
+    text-align: center;
+    padding: 3rem;
+}
+.enroll-success-message h2 {
+    font-size: 2rem;
+    color: #0056D2;
+    margin-bottom: 1rem;
+}
+.enroll-success-message a {
+    font-weight: bold;
+}
+
+/* --- NEW STYLES for Secondary Button and Financial Aid --- */
+
+/* For the "Try a Sample Lesson" button */
+.course-sidebar .secondary-button {
+    display: block;
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #0056D2;
+    border: 1px solid #0056D2;
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.course-sidebar .secondary-button:hover {
+    background-color: #EBF3FF;
+    text-decoration: none;
+}
+
+/* For the financial aid text at the bottom of the sidebar */
+.financial-aid-info {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #D8D8D8;
+}
+
+.financial-aid-info p {
+    font-size: 0.875rem;
+    color: #6B7780;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* --- INSTRUCTOR AVATAR STYLES (NEW) --- */
+.instructor-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;      /* Makes the image circular */
+    object-fit: cover;       /* Prevents the image from stretching */
+    margin-bottom: 1.5rem;   /* Adds space below the image */
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --- NEW STYLES for Secondary Button and Financial Aid --- */
+
+/* For the "Try a Sample Lesson" button */
+.course-sidebar .secondary-button {
+    display: block;
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #0056D2;
+    border: 1px solid #0056D2;
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.course-sidebar .secondary-button:hover {
+    background-color: #EBF3FF;
+    text-decoration: none;
+}
+
+/* For the financial aid text at the bottom of the sidebar */
+/* --- FINANCIAL AID and GROUP DISCOUNT STYLES --- */
+.financial-aid-info {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #D8D8D8;
+    text-align: center;
+}
+
+/* Styles the "Financial aid available" link */
+.financial-aid-info a {
+    font-weight: bold;
+    color: #0056D2;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+/* Styles the "Group discounts..." text */
+.financial-aid-info p {
+    font-size: 0.8rem;
+    color: #6B7780;
+    margin-top: 0.25rem;
+}
+
+/* --- SUBSCRIPTION PROMO SECTION STYLES (NEW) --- */
+.subscription-promo-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 3rem;
+    background-color: #EBF3FF; /* A light blue to stand out */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.subscription-promo-section .promo-content {
+    flex: 1;
+}
+
+.subscription-promo-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.subscription-promo-section p {
+    font-size: 1.1rem;
+    color: #373A3C;
+    margin-bottom: 1.5rem;
+}
+
+.subscription-promo-section .feature-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.subscription-promo-section .feature-list li {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+}
+
+/* Adds a checkmark icon before each list item */
+.subscription-promo-section .feature-list li::before {
+    content: '✔';
+    color: #28a745; /* A green color for the checkmark */
+    position: absolute;
+    left: 0;
+}
+
+.subscription-promo-section .promo-cta {
+    background-color: #0056D2;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.subscription-promo-section .promo-cta:hover {
+    background-color: #00419E;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-promo-section .promo-image {
+    flex: 0 0 400px; /* Fixed width for the image container */
+    display: none; /* Hide on small screens */
+}
+
+.subscription-promo-section .promo-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+@media (min-width: 992px) {
+    .subscription-promo-section .promo-image {
+        display: block; /* Show image on larger screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .subscription-promo-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+    }
+    .subscription-promo-section .feature-list li {
+        text-align: left;
+    }
+}
+
+/* --- COURSERA PLUS PRICING PAGE STYLES (NEW) --- */
+.plus-page-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.plus-hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 3rem;
+}
+
+.plus-hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.plus-hero p {
+    font-size: 1.25rem;
+    color: #6B7780;
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    background-color: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.pricing-card.recommended {
+    border-color: #0056D2;
+    border-width: 2px;
+}
+
+.recommended-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0056D2;
+    color: white;
+    padding: 0.25rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.pricing-card h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-card .price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0056D2;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-card .price span {
+    font-size: 1rem;
+    color: #6B7780;
+    font-weight: 400;
+}
+
+.pricing-card .billing-info {
+    color: #6B7780;
+    margin-bottom: 1.5rem;
+    min-height: 40px; /* Prevents layout shifts */
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    text-align: left;
+}
+
+.plan-features li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.plan-features li::before {
+    content: '✔';
+    color: #28a745;
+    position: absolute;
+    left: 0;
+}
+
+.select-plan-btn {
+    display: block;
+    width: 100%;
+    background-color: #0056D2;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: background-color 0.2s ease;
+}
+
+.select-plan-btn:hover {
+    background-color: #00419E;
+    text-decoration: none;
+}
+
+/* --- URGENCY MESSAGE STYLES --- */
+.urgency-message {
+    color: #c41230; /* A strong but not overly bright red */
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: #fce8e6; /* A very light red/pink background */
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-top: -0.5rem; /* Pulls it closer to the price */
+    margin-bottom: 1.25rem;
+}
+
+/* --- SPECIAL OFFER TAG ON COURSE CARDS (NEW) --- */
+
+/* This ensures the image container can anchor the absolutely positioned tag.
+   Your .image-container rule may already have this from our previous steps. */
+   .crole-card .image-container {
+    position: relative; 
+}
+
+.special-offer-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #c41230; /* Use the same strong red as the urgency message */
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px; /* Pill shape */
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 2; /* Ensures it sits on top of the image */
+    pointer-events: none; /* Prevents the tag from interfering with clicks on the card */
+}
+
+/* --- FINANCIAL AID PAGE STYLES (NEW) --- */
+.aid-page-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 1.5rem;
+}
+
+.aid-page-container h1 {
+    font-size: 2.75rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.aid-page-container .subtitle {
+    font-size: 1.1rem;
+    text-align: center;
+    color: #6B7780;
+    margin-bottom: 4rem;
+}
+
+.aid-steps .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.aid-steps .step-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #0056D2;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.aid-steps .step-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.apply-section {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: #F5F7FA;
+    border-radius: 8px;
+}
+
+.apply-now-btn {
+    display: inline-block;
+    background-color: #28a745; /* Green for a positive action */
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+}
+
+.apply-now-btn:hover {
+    background-color: #218838;
+}
+
+/* ======================= CHATBOT STYLES ======================= */
+
+/* The button to open the chat */
+#chat-toggle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0056D2;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.2s ease;
+}
+
+#chat-toggle-button:hover {
+    transform: scale(1.1);
+}
+
+/* The main chat window container */
+#chat-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px;
+    max-width: 90vw;
+    height: 500px;
+    max-height: 80vh;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform-origin: bottom right;
+}
+
+#chat-container.hidden {
+    opacity: 0;
+    transform: scale(0.5);
+    pointer-events: none; /* Can't click it when hidden */
+}
+
+/* Chat window header */
+#chat-header {
+    background-color: #0056D2;
+    color: white;
+    padding: 1rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chat-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+#chat-close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* The area where messages appear */
+#chat-messages {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto; /* Allows scrolling */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Individual message styling */
+.bot-message, .user-message {
+    padding: 0.75rem 1rem;
+    border-radius: 18px;
+    max-width: 80%;
+    line-height: 1.4;
+}
+
+.bot-message {
+    background-color: #F1F1F1;
+    color: #1F1F1F;
+    border-bottom-left-radius: 4px;
+    align-self: flex-start;
+}
+
+.user-message {
+    background-color: #0056D2;
+    color: white;
+    border-bottom-right-radius: 4px;
+    align-self: flex-end;
+}
+
+/* The input area at the bottom */
+#chat-input-container {
+    display: flex;
+    padding: 1rem;
+    border-top: 1px solid #D8D8D8;
+}
+
+#chat-input {
+    flex-grow: 1;
+    border: 1px solid #D8D8D8;
+    border-radius: 20px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+#chat-send-button {
+    background-color: #0056D2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.75rem 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* NOTEPAD STYLES */
+
+/* The button to open the notepad */
+#notepad-toggle-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Positioned in the opposite corner of the chat */
+    background-color: #0056D2;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.2s ease;
+}
+
+#notepad-toggle-button:hover {
+    transform: scale(1.1);
+}
+
+/* The main notepad window container */
+#notepad-container {
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+    width: 350px;
+    max-width: 90vw;
+    height: 500px;
+    max-height: 80vh;
+    background-color: #ffffff;
+    border: 1px solid #d8d8d8;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform-origin: bottom left; /* Animate from the bottom-left */
+}
+
+/* This is the same hidden class used by the chatbot */
+#notepad-container.hidden {
+    opacity: 0;
+    transform: scale(0.5);
+    pointer-events: none;
+}
+
+/* Notepad window header */
+#notepad-header {
+    background-color: #f5f5f5;
+    color: #1F1F1F;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #d8d8d8;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#notepad-header h3 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+#notepad-close-button {
+    background: none;
+    border: none;
+    color: #6B7780;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* The area where the textarea lives */
+#notepad-content {
+    flex-grow: 1;
+    padding: 0; /* Remove padding to let textarea fill space */
+}
+
+/* The textarea for typing notes */
+#notepad-textarea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    resize: none; /* Prevent user from resizing */
+}
+
+#notepad-textarea:focus {
+    outline: none; /* Remove focus ring */
+}
+
+/* The footer for status messages */
+#notepad-footer {
+    padding: 0.5rem 1rem;
+    border-top: 1px solid #d8d8d8;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+#notepad-status {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #6B7780;
+}
+
+/* In css/style.css, at the bottom */
+
+/* MOBILE RESPONSIVE STYLES  */
+
+/* We'll use 768px as the breakpoint for mobile devices */
+@media (max-width: 768px) {
+
+    /* --- 1. Main Navigation --- */
+    .main-nav, .auth-nav {
+        display: none; /* Hide desktop nav links */
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffffff;
+        position: absolute;
+        top: 70px; /* Position below the header */
+        left: 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .main-nav a, .auth-nav a {
+        width: 100%;
+        padding: 1rem;
+        border-bottom: 1px solid #f0f0f0;
+        text-align: center;
+    }
+
+    /* This class will be toggled by JavaScript */
+    .nav-active .main-nav, .nav-active .auth-nav {
+        display: flex; /* Show the nav when active */
+    }
+
+    .mobile-menu-toggle {
+        display: block; /* Show the hamburger button */
+    }
+    
+    /* --- 2. Layout Stacking --- */
+    .hero, .role-cards, .outcomes-section .outcomes-container, 
+    .coursera-business-promo .c-b-promo__container,
+    .coursera-personal-goals .c-p-goals__container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .certificate-cards, .genai-cards {
+        flex-wrap: nowrap; /* Ensure horizontal scrolling on mobile */
+        overflow-x: auto;
+    }
+    
+    .category-grid, .footer-grid {
+        grid-template-columns: 1fr; /* Stack grid items into a single column */
+    }
+    
+    /* --- 3. Font Size Adjustments --- */
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .subscription-promo-section h2, .coursera-testimonials__title {
+        font-size: 1.75rem;
+    }
+
+    /* --- 4. Spacing and Padding --- */
+    section, .dynamic-catalog, .certificates {
+        padding: 2rem 1rem; /* Reduce padding on all sections */
+    }
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    /* --- 5. Floating UI Elements --- */
+    #chat-container, #notepad-container {
+        /* On small screens, make them a bit smaller to not cover the whole view */
+        width: 90vw;
+        height: 70vh;
+    }
+}
+
+/* ========= MOBILE RESPONSIVE FIXES ========= */
+
+/* General layout fixes for tablets and small screens */
+@media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .top-nav,
+    .topsec-nav,
+    .main-nav,
+    .auth-nav,
+    header,
+    .career-div-nav,
+    .genai-div-nav {
+      flex-direction: column !important;
+      align-items: center !important;
+      padding: 10px !important;
+      gap: 10px;
+      text-align: center;
+    }
+  
+    .top-nav-right {
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
+    
+
+    /* ========= TOP NAV BAR - MATCH BUSINESS PAGE STYLE (Mobile) ========= */
+@media (max-width: 768px) {
+    .top-nav {
+      background-color: #ffffff !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      padding: 1rem !important;
+      text-align: center;
+      gap: 10px;
+    }
+  
+    .audience-nav {
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-left: 0 !important;
+    }
+  
+    .audience-nav a {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      color: #0056D2 !important;
+      border-bottom: 1px solid transparent;
+    }
+  
+    .audience-nav a.active {
+      font-weight: bold;
+      border-color: #0056D2;
+    }
+  
+    .audience-nav a:hover {
+      background-color: #f0f0f0;
+      border-radius: 4px;
+    }
+  }
+  
+
+    .explore-button,
+    .career-div-navbuttons,
+    .career-div-popular,
+    .career-div-level,
+    .explore-all,
+    .certificate-showmore-btn {
+      font-size: 0.9rem !important;
+      width: 90% !important;
+      margin: 5px auto !important;
+    }
+  
+    .explore-dropdown {
+      width: 100% !important;
+      position: static !important;
+      grid-template-columns: 1fr !important;
+      padding: 1rem;
+    }
+  
+    .hero,
+    .subscription-promo-section,
+    .genai-outercards,
+    .certificate-cards,
+    .degree-cards,
+    .career-roles {
+      flex-direction: column !important;
+      padding: 1rem !important;
+      gap: 1.5rem !important;
+      align-items: center !important;
+    }
+  
+    .hero-content {
+      text-align: center;
+      padding: 0;
+    }
+  
+    .role-cards,
+    .genai-cards {
+      flex-direction: column !important;
+      align-items: center !important;
+      margin-left: 0 !important;
+      padding: 0 !important;
+    }
+  
+    .role-card,
+    .crole-card,
+    .grole-card {
+      width: 100% !important;
+      min-width: unset !important;
+    }
+  
+    .footer-grid {
+      grid-template-columns: 1fr !important;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+  
+  /* Smaller screens (phones <480px) */
+  @media (max-width: 480px) {
+    .career-div-nav,
+    .genai-div-nav {
+      padding-left: 0 !important;
+    }
+  
+    .search-container {
+      padding: 0 1rem !important;
+    }
+  
+    .top-buttons {
+      flex-direction: column !important;
+      align-items: flex-end;
+    }
+  
+    .certificates,
+    .degrees {
+      padding: 1rem !important;
+    }
+  
+    .certificates h2,
+    .degrees h2 {
+      font-size: 1.5rem;
+    }
+  
+    .genai-showmore-btn,
+    .certificate-showmore-btn {
+      width: 100% !important;
+    }
+  
+    .promo-image {
+      margin-bottom: 1rem;
+      order: -1;
+    }
+  
+    .text-content {
+      padding-left: 0 !important;
+    }
+  
+    .hero-image img {
+      border-radius: 12px;
+    }
+  }
+  

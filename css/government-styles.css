@@ -1,0 +1,234 @@
+/* In css/government-styles.css */
+
+:root {
+    --gov-primary-blue: #002D72;
+    --gov-light-bg: #F5F7FA;
+    --gov-text-dark: #2A2A2A;
+    --gov-text-light: #5F5F5F;
+    --gov-cta-blue: #0056D2;
+}
+
+/* --- 1. Hero Section --- */
+.gov-hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 5%;
+    background-color: var(--gov-light-bg);
+}
+.gov-hero .hero-content { flex: 1 1 45%; }
+.gov-hero .hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--gov-primary-blue);
+    margin-bottom: 1.5rem;
+}
+.gov-hero .hero-content p {
+    font-size: 1.25rem;
+    color: var(--gov-text-light);
+    margin-bottom: 2rem;
+}
+.gov-hero .cta-button {
+    background-color: var(--gov-cta-blue);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.gov-hero .hero-image { flex: 1 1 55%; text-align: right; }
+.gov-hero .hero-image img { max-width: 100%; }
+
+/* --- 2. "As Seen In" Logo Strip --- */
+.seen-in {
+    padding: 2.5rem 5%;
+    background-color: #FFFFFF;
+}
+.seen-in .logo-strip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+.seen-in .logo-strip img {
+    max-height: 30px;
+    filter: grayscale(100%) brightness(0.5);
+    opacity: 0.8;
+}
+
+/* --- 3. Interactive Tabbed Section --- */
+.gov-features {
+    text-align: center;
+    padding: 4rem 5%;
+    background-color: var(--gov-light-bg);
+}
+.gov-features h2 {
+    font-size: 2.5rem;
+    color: var(--gov-text-dark);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+/* Re-using tab styles from campus-styles.css is a good idea, but we define them here for clarity */
+.tabs-nav .tab-link {
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.tabs-nav .tab-link.active {
+    background-color: var(--gov-cta-blue);
+    color: white;
+}
+.tabs-content .tab-pane {
+    display: none;
+    align-items: center;
+    gap: 3rem;
+    text-align: left;
+    max-width: 900px;
+    margin: 3rem auto 0 auto;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+.tabs-content .tab-pane.active { display: flex; opacity: 1; }
+.tab-pane img { max-width: 50%; border-radius: 8px; }
+
+/* --- 4. Featured Programs Section --- */
+.featured-programs {
+    padding: 4rem 5%;
+    text-align: center;
+}
+.featured-programs h2 {
+    font-size: 2.5rem;
+    color: var(--gov-text-dark);
+    margin-bottom: 3rem;
+}
+.program-cards-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto; /* Makes it scrollable horizontally */
+    padding-bottom: 1.5rem; /* Space for scrollbar */
+    justify-content: flex-start;
+}
+.program-card {
+    flex: 0 0 320px; /* Each card has a fixed width */
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    transition: box-shadow 0.2s;
+}
+.program-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.program-card img { width: 100%; display: block; }
+.program-card h4 { font-size: 1.1rem; margin: 1rem 1rem 0.25rem 1rem; }
+.program-card p { font-size: 0.9rem; color: var(--gov-text-light); margin: 0 1rem 1rem 1rem; }
+
+/* --- Responsive Media Query --- */
+@media (max-width: 768px) {
+    .gov-hero, .tab-pane.active {
+        flex-direction: column;
+        text-align: center;
+    }
+    .gov-hero .hero-content h1 { font-size: 2.5rem; }
+    h2, .gov-features h2, .featured-programs h2 { font-size: 2rem; }
+    .tab-pane img { max-width: 100%; }
+}
+
+/* ===== Enhanced Mobile Responsive Fixes (business.css style) ===== */
+@media (max-width: 600px) {
+    .gov-hero {
+      flex-direction: column;
+      padding: 2rem 1rem;
+      text-align: center;
+      gap: 1.5rem;
+    }
+  
+    .gov-hero .hero-content {
+      flex: unset;
+      width: 100%;
+    }
+  
+    .gov-hero .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .gov-hero .hero-content p {
+      font-size: 1rem;
+    }
+  
+    .gov-hero .cta-button {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+    }
+  
+    .gov-hero .hero-image {
+      text-align: center;
+    }
+  
+    .gov-hero .hero-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .seen-in .logo-strip {
+      gap: 1.5rem;
+    }
+  
+    .gov-features {
+      padding: 2rem 1rem;
+    }
+  
+    .gov-features h2 {
+      font-size: 1.75rem;
+    }
+  
+    .tabs-nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+  
+    .tabs-content .tab-pane {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    .tab-pane img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .featured-programs {
+      padding: 2rem 1rem;
+    }
+  
+    .featured-programs h2 {
+      font-size: 1.75rem;
+    }
+  
+    .program-cards-container {
+      flex-direction: row;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
+    }
+  
+    .program-card {
+      scroll-snap-align: start;
+      flex: 0 0 90%;
+      max-width: 320px;
+    }
+  
+    .program-card h4 {
+      font-size: 1rem;
+    }
+  
+    .program-card p {
+      font-size: 0.85rem;
+    }
+  }
+  
