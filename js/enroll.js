@@ -1,4 +1,4 @@
-// js/enroll.js
+// js/enroll.js - Fully Updated with Progress Bar Logic
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -7,18 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const formWrapper = document.querySelector('.enroll-form-wrapper');
 
     const params = new URLSearchParams(window.location.search);
-    const courseId = parseInt(params.get('id'));
-    const course = courses.find(c => c.id === courseId);
+    // Use the string version of id for consistency with localStorage
+    const courseId = params.get('id'); 
+    // Find the course using a non-strict comparison '==' because course.id is a number
+    const course = courses.find(c => c.id == courseId);
 
     if (course) {
         pageTitle.textContent = `Enroll in "${course.title}"`;
     } else {
-        pageTitle.textContent = 'Enroll in a Course';
+        // Handle case where course ID is missing or invalid
+        pageTitle.textContent = 'Enrollment Error';
+        if (formWrapper) {
+            formWrapper.innerHTML = '<p style="color: red; text-align: center;">Error: Course not found. Please return to the catalog and select a course to enroll in.</p>';
+        }
+        return; // Stop the script if no valid course is found
     }
 
     // --- 2. GET FORM ELEMENTS ---
     const form = document.getElementById('enrollment-form');
-    if (!form) return; // Stop if there's no form on the page
+    if (!form) return;
 
     const nameInput = document.getElementById('full-name');
     const emailInput = document.getElementById('email');
@@ -35,16 +42,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const isFormValid = validateForm();
 
         if (isFormValid) {
-            // If valid, show the success message
-            showSuccessMessage();
+            // --- REPLACE showSuccessMessage() ---
+
+            // 1. Get the list of enrolled courses from localStorage.
+            let enrolledCourses = JSON.parse(localStorage.getItem('enrolledCourses')) || [];
+
+            // 2. Add the new course ID to the list if it's not already there.
+            if (!enrolledCourses.includes(courseId)) {
+                enrolledCourses.push(courseId);
+            }
+
+            // 3. Save the updated list back to localStorage.
+            localStorage.setItem('enrolledCourses', JSON.stringify(enrolledCourses));
+            
+            // 4. Redirect the user back to the course detail page to see their new progress bar.
+            alert('Enrollment successful! You will now be taken back to the course page.');
+            window.location.href = `course.html?id=${courseId}`;
         }
     });
 
-    // --- 4. VALIDATION FUNCTION ---
+    // --- 4. VALIDATION FUNCTION (Unchanged) ---
     function validateForm() {
         let isValid = true;
-
-        // Clear all previous errors
         document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
 
         // Validate Full Name
@@ -54,13 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Validate Email
-        const emailPattern = /^\S+@\S+\.\S+$/; // Simple email regex
+        const emailPattern = /^\S+@\S+\.\S+$/;
         if (!emailPattern.test(emailInput.value)) {
             document.getElementById('email-error').textContent = 'Please enter a valid email address.';
             isValid = false;
         }
 
-        // Validate Card Number (simple check for non-empty)
+        // Validate Card Number
         if (cardInput.value.trim().length < 16) {
             document.getElementById('card-error').textContent = 'Please enter a valid card number.';
             isValid = false;
@@ -82,6 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 5. SUCCESS MESSAGE FUNCTION ---
+    /*
     function showSuccessMessage() {
         const courseName = course ? `"${course.title}"` : "the course";
         
@@ -95,4 +115,5 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
         `;
     }
+    */
 });
