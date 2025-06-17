@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const params = new URLSearchParams(window.location.search);
     const courseId = params.get('id'); // Get ID as a string for consistent comparison
-    const course = courses.find(c => c.id == courseId); // Use '==' to compare string and number
+    const course = courses.find(c => c.id == courseId); //  '==' to compare string and number
 
     if (!course) {
         mainContainer.innerHTML = '<h1>Course not found!</h1><p>Sorry, the course you are looking for does not exist. Please <a href="index.html">return to the catalog</a>.</p>';
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.title = `${course.title} | Coursera Clone`;
 
-    // --- DYNAMICALLY BUILD HTML  ---
+    // code to DYNAMICALLY BUILD HTML  
 
     const syllabusItems = course.syllabus.map(item => `<li>${item}</li>`).join('');
 

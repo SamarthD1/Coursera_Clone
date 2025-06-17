@@ -237,14 +237,14 @@ body {
 }
 .logo-item img {
     max-width: 150px;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%);
     opacity: 0.7;
-    transition: all 0.3s;
+    transition: all 0.3s; */
 }
-.logo-item:hover img {
+/* .logo-item:hover img {
     filter: grayscale(0%);
     opacity: 1;
-}
+} */
 
 /* --- Testimonial Section --- */
 .testimonial-section {
