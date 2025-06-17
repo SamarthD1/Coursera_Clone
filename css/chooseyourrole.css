@@ -658,3 +658,130 @@ h2 {
     .sub-footer { flex-direction: column; gap: 20px; }
     h1 { font-size: 2.5rem; }
 }
+
+/*  FULL MOBILE ENHANCEMENTS FOR ≤ 480px  */
+@media (max-width: 480px) {
+    body {
+      font-size: 15px;
+    }
+  
+    .top-bar,
+    .main-nav,
+    .nav-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    .nav-left,
+    .nav-right {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+    }
+  
+    .search-bar {
+      width: 100%;
+      max-width: 100%;
+      padding: 5px 10px;
+    }
+  
+    .search-bar input {
+      font-size: 0.9rem;
+    }
+  
+    .btn,
+    .btn-primary,
+    .btn-secondary {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+    }
+  
+    .hero-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 30px;
+      padding: 2rem 1rem;
+    }
+  
+    .hero-content {
+      flex-basis: 100%;
+    }
+  
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+    }
+  
+    .hero-image-wrapper {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  
+    .salary-card {
+      position: static;
+      transform: none;
+      margin-top: 1rem;
+      border-radius: 12px;
+    }
+  
+    .tabs-nav,
+    .resources-tabs-nav {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+    }
+  
+    .credential-card {
+      flex-direction: column;
+      padding: 16px;
+    }
+  
+    .credential-info h3 {
+      font-size: 1.25rem;
+    }
+  
+    .slider-track {
+      gap: 12px;
+    }
+  
+    .course-thumb {
+      flex: 0 0 130px;
+    }
+  
+    .resource-card,
+    .role-card {
+      padding: 16px;
+    }
+  
+    .resources-grid,
+    .roles-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .resource-card h3,
+    .role-card-content h3 {
+      font-size: 1rem;
+    }
+  
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .sub-footer {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  }
+  
